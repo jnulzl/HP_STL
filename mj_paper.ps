@@ -1,0 +1,4576 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 4.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 4.0, for use with Frame 4.0 products
+% This ps_prolog file is Copyright (c) 1986-1993 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameBuilder and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to True, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (4.0) def 
+/FMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	FMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto
+	show FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(PostScript Lang. Ref. Man., 2nd Ed., H.2.4 says EPS must not call X              )
+	dup dup (X) search pop exch pop exch pop length 
+	4 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+/concatprocs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin 
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/FrameNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		setrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+FMLevel1 not { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} if
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				FMPColor graymode and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not FMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	FMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgrxfer FMLOCAL
+	/orggxfer FMLOCAL
+	/orgbxfer FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/orgrproc FMLOCAL
+	/orggproc FMLOCAL
+	/orgbproc FMLOCAL
+	/organgle FMLOCAL
+	/orgrangle FMLOCAL
+	/orggangle FMLOCAL
+	/orgbangle FMLOCAL
+	/orgfreq FMLOCAL
+	/orgrfreq FMLOCAL
+	/orggfreq FMLOCAL
+	/orgbfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/edown FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /FrameNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	FMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{{1 dict dup /PageSize [paperwidth paperheight]put setpagedevice}stopped
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		 {1 dict dup /ManualFeed manualfeed put setpagedevice } stopped pop }
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			FrameNegative {
+				1 1 4 { 
+					pop { 1 exch sub } concatprocs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		FrameNegative {
+			{ 1 exch sub } concatprocs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/pagesave FMLOCAL
+/orgmatrix FMLOCAL
+/landscape FMLOCAL
+/pwid FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/initmatrix {(initmatrix) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setPatternMode {
+	FMLevel1 {
+		/bwidth  exch def
+		/bpside  exch def
+		/bstring exch def
+		/onbits 0 def  /offbits 0 def
+		freq sangle landscape {90 add} if 
+			{/y exch def
+			 /x exch def
+			 /xindex x 1 add 2 div bpside mul cvi def
+			 /yindex y 1 add 2 div bpside mul cvi def
+			 bstring yindex bwidth mul xindex 8 idiv add get
+			 1 7 xindex 8 mod sub bitshift and 0 ne FrameNegative {not} if
+			 {/onbits  onbits  1 add def 1}
+			 {/offbits offbits 1 add def 0}
+			 ifelse
+			}
+			setscreen
+		offbits offbits onbits add div FrameNegative {1.0 exch sub} if
+		/FrameCurGray exch def
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		FMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode FMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode FMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+	/rad FMLOCAL
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+      dup dup
+      24 eq { pop pop 3 mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+FMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch concatprocs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def
+	FMLevel1 {	
+		colorsetup
+		/is w d wbytes string def
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is w d wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	FMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {ip} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/d 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris} {gis} {bis} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/d 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris gis bis w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(4.0) FMVERSION
+1 1 0 0 612 792 0 1 15 FMDOCUMENT
+0 0 /Times-Roman FMFONTDEFINE
+1 0 /Helvetica-Bold FMFONTDEFINE
+2 0 /Helvetica FMFONTDEFINE
+3 0 /Times-Italic FMFONTDEFINE
+4 0 /Times-Bold FMFONTDEFINE
+5 0 /Courier FMFONTDEFINE
+6 1 /Symbol FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "25" 1
+%%BeginPaperSize: A4
+%%EndPaperSize
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(25) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+172.39 664.01 116.37 664.01 2 L
+V
+0.66 H
+0 Z
+N
+1 9 Q
+(APPENDIX 2.) 116.37 664.97 T
+442.03 664.1 252.43 664.1 2 L
+V
+N
+2 F
+(//Sample input and output of the KWIC program) 252.43 664.97 T
+0 10 Q
+(Input \336le:) 116.37 647.3 T
+2 9 Q
+(Fundamentals of Software Engineering) 116.37 636.97 T
+(Applicators, Manipulators, and Function Objects) 116.37 625.97 T
+(An introduction to the Standard T) 116.37 614.97 T
+(emplate Library) 247.45 614.97 T
+0 10 Q
+(Output \336le:) 116.37 597.3 T
+2 9 Q
+(AN INTRODUCTION T) 116.37 586.97 T
+(O THE ST) 208.21 586.97 T
+(ANDARD TEMPLA) 249.05 586.97 T
+(TE LIBRAR) 324.89 586.97 T
+(Y) 371.24 586.97 T
+(:) 376.75 586.97 T
+( AN INTRODUCTION T) 134.37 575.97 T
+(O THE ST) 228.71 575.97 T
+(ANDARD TEMPLA) 269.55 575.97 T
+(TE LIBRAR) 345.39 575.97 T
+(Y) 391.74 575.97 T
+(AND FUNCTION OBJECTS APPLICA) 116.37 564.97 T
+(T) 268.23 564.97 T
+(ORS, MANIPULA) 273.57 564.97 T
+(T) 343.42 564.97 T
+(ORS,:) 348.75 564.97 T
+( APPLICA) 134.37 553.97 T
+(T) 174.22 553.97 T
+(ORS, MANIPULA) 179.56 553.97 T
+(T) 249.41 553.97 T
+(ORS, AND FUNCTION OBJECTS) 254.75 553.97 T
+(APPLICA) 116.37 542.97 T
+(T) 153.72 542.97 T
+(ORS, MANIPULA) 159.06 542.97 T
+(T) 228.91 542.97 T
+(ORS, AND FUNCTION OBJECTS:) 234.24 542.97 T
+( APPLICA) 134.37 531.97 T
+(T) 174.22 531.97 T
+(ORS, MANIPULA) 179.56 531.97 T
+(T) 249.41 531.97 T
+(ORS, AND FUNCTION OBJECTS) 254.75 531.97 T
+(ENGINEERING FUNDAMENT) 116.37 520.97 T
+(ALS OF SOFTW) 237.71 520.97 T
+(ARE:) 304.39 520.97 T
+( FUNDAMENT) 134.37 509.97 T
+(ALS OF SOFTW) 192.7 509.97 T
+(ARE ENGINEERING) 259.38 509.97 T
+(FUNCTION OBJECTS APPLICA) 116.37 498.97 T
+(T) 246.73 498.97 T
+(ORS, MANIPULA) 252.07 498.97 T
+(T) 321.91 498.97 T
+(ORS, AND:) 327.25 498.97 T
+( APPLICA) 134.37 487.97 T
+(T) 174.22 487.97 T
+(ORS, MANIPULA) 179.56 487.97 T
+(T) 249.41 487.97 T
+(ORS, AND FUNCTION OBJECTS) 254.75 487.97 T
+(FUNDAMENT) 116.37 476.97 T
+(ALS OF SOFTW) 172.2 476.97 T
+(ARE ENGINEERING:) 238.88 476.97 T
+( FUNDAMENT) 134.37 465.97 T
+(ALS OF SOFTW) 192.7 465.97 T
+(ARE ENGINEERING) 259.38 465.97 T
+(INTRODUCTION T) 116.37 454.97 T
+(O THE ST) 193.21 454.97 T
+(ANDARD TEMPLA) 234.05 454.97 T
+(TE LIBRAR) 309.89 454.97 T
+(Y AN:) 356.24 454.97 T
+( AN INTRODUCTION T) 134.37 443.97 T
+(O THE ST) 228.71 443.97 T
+(ANDARD TEMPLA) 269.55 443.97 T
+(TE LIBRAR) 345.39 443.97 T
+(Y) 391.74 443.97 T
+(LIBRAR) 116.37 432.97 T
+(Y AN INTRODUCTION T) 148.72 432.97 T
+(O THE ST) 249.06 432.97 T
+(ANDARD TEMPLA) 289.9 432.97 T
+(TE:) 365.74 432.97 T
+( AN INTRODUCTION T) 134.37 421.97 T
+(O THE ST) 228.71 421.97 T
+(ANDARD TEMPLA) 269.55 421.97 T
+(TE LIBRAR) 345.39 421.97 T
+(Y) 391.74 421.97 T
+(MANIPULA) 116.37 410.97 T
+(T) 161.71 410.97 T
+(ORS, AND FUNCTION OBJECTS APPLICA) 167.05 410.97 T
+(T) 343.42 410.97 T
+(ORS,:) 348.75 410.97 T
+( APPLICA) 134.37 399.97 T
+(T) 174.22 399.97 T
+(ORS, MANIPULA) 179.56 399.97 T
+(T) 249.41 399.97 T
+(ORS, AND FUNCTION OBJECTS) 254.75 399.97 T
+(OBJECTS APPLICA) 116.37 388.97 T
+(T) 197.73 388.97 T
+(ORS, MANIPULA) 203.07 388.97 T
+(T) 272.92 388.97 T
+(ORS, AND FUNCTION:) 278.26 388.97 T
+( APPLICA) 134.37 377.97 T
+(T) 174.22 377.97 T
+(ORS, MANIPULA) 179.56 377.97 T
+(T) 249.41 377.97 T
+(ORS, AND FUNCTION OBJECTS) 254.75 377.97 T
+(OF SOFTW) 116.37 366.97 T
+(ARE ENGINEERING FUNDAMENT) 163.54 366.97 T
+(ALS:) 305.89 366.97 T
+( FUNDAMENT) 134.37 355.97 T
+(ALS OF SOFTW) 192.7 355.97 T
+(ARE ENGINEERING) 259.38 355.97 T
+(SOFTW) 116.37 344.97 T
+(ARE ENGINEERING FUNDAMENT) 148.54 344.97 T
+(ALS OF:) 290.88 344.97 T
+( FUNDAMENT) 134.37 333.97 T
+(ALS OF SOFTW) 192.7 333.97 T
+(ARE ENGINEERING) 259.38 333.97 T
+(ST) 116.37 322.97 T
+(ANDARD TEMPLA) 127.21 322.97 T
+(TE LIBRAR) 203.05 322.97 T
+(Y AN INTRODUCTION T) 249.4 322.97 T
+(O THE:) 349.74 322.97 T
+( AN INTRODUCTION T) 134.37 311.97 T
+(O THE ST) 228.71 311.97 T
+(ANDARD TEMPLA) 269.55 311.97 T
+(TE LIBRAR) 345.39 311.97 T
+(Y) 391.74 311.97 T
+(TEMPLA) 116.37 300.97 T
+(TE LIBRAR) 151.71 300.97 T
+(Y AN INTRODUCTION T) 198.07 300.97 T
+(O THE ST) 298.41 300.97 T
+(ANDARD:) 339.25 300.97 T
+( AN INTRODUCTION T) 134.37 289.97 T
+(O THE ST) 228.71 289.97 T
+(ANDARD TEMPLA) 269.55 289.97 T
+(TE LIBRAR) 345.39 289.97 T
+(Y) 391.74 289.97 T
+(THE ST) 116.37 278.97 T
+(ANDARD TEMPLA) 147.71 278.97 T
+(TE LIBRAR) 223.55 278.97 T
+(Y AN INTRODUCTION T) 269.9 278.97 T
+(O:) 370.24 278.97 T
+( AN INTRODUCTION T) 134.37 267.97 T
+(O THE ST) 228.71 267.97 T
+(ANDARD TEMPLA) 269.55 267.97 T
+(TE LIBRAR) 345.39 267.97 T
+(Y) 391.74 267.97 T
+(T) 116.37 256.97 T
+(O THE ST) 121.71 256.97 T
+(ANDARD TEMPLA) 162.55 256.97 T
+(TE LIBRAR) 238.39 256.97 T
+(Y AN INTRODUCTION:) 284.74 256.97 T
+( AN INTRODUCTION T) 134.37 245.97 T
+(O THE ST) 228.71 245.97 T
+(ANDARD TEMPLA) 269.55 245.97 T
+(TE LIBRAR) 345.39 245.97 T
+(Y) 391.74 245.97 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "25" 1
+%%Page: "24" 2
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(24) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 9 Q
+(private:) 116.37 664.97 T
+(    permutedT) 116.37 653.97 T
+(itles_t& index;) 169.56 653.97 T
+(};) 116.37 631.97 T
+(inline ostream& operator<<\050ostream& out, const T) 116.37 609.97 T
+(itlesPair_t& p\051) 315.62 609.97 T
+({) 116.37 598.97 T
+(    return out << p.\336rst << \322:\134n\134t \322 << \050*\050p.second\051\051 << \324\134n\325;) 116.37 587.97 T
+(}) 116.37 576.97 T
+(// main program) 116.37 554.97 T
+(int main \050int argc, char *argv[]\051 {) 116.37 532.97 T
+(    T) 116.37 521.97 T
+(itles_t titles;) 131.55 521.97 T
+(    permutedT) 116.37 510.97 T
+(itles_t KWICindex;) 169.56 510.97 T
+(    copy\050istream_iterator<string,ptrdif) 116.37 488.97 T
+(f_t>\050cin\051,) 260.51 488.97 T
+( istream_iterator<string,ptrdif) 134.37 477.97 T
+(f_t>\050\051,) 249 477.97 T
+( back_inserter\050titles\051\051;) 134.37 466.97 T
+(    for_each\050titles.begin\050\051, titles.end\050\051,) 116.37 444.97 T
+(     CircularShift\050KWICindex\051\051;) 134.37 433.97 T
+(    copy\050KWICindex.begin\050\051, KWICindex.end\050\051,) 116.37 411.97 T
+( ostream_iterator<T) 134.37 400.97 T
+(itlesPair_t >\050cout\051\051;) 212.82 400.97 T
+(    return 0;) 116.37 378.97 T
+(}) 116.37 367.97 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "24" 2
+%%Page: "23" 3
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(23) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 9 Q
+(    string operator*\050\051) 116.37 664.97 T
+(    {) 116.37 653.97 T
+(if\050\050pos == str) 134.37 642.97 T
+(.begin\050\051\051 || \050pos == 0\051\051 return str;) 184.39 642.97 T
+(string ret;) 134.37 620.97 T
+(copy\050pos+1, str) 134.37 609.97 T
+(.end\050\051, back_inserter\050ret\051\051;) 195.65 609.97 T
+(ret.push_back\050\324 \324\051;) 134.37 598.97 T
+(copy\050str) 134.37 587.97 T
+(.begin\050\051, pos, back_inserter\050ret\051\051;) 165.88 587.97 T
+(return ret;) 134.37 576.97 T
+(    }) 116.37 565.97 T
+(    permute& operator++\050\051) 116.37 543.97 T
+(    {) 116.37 532.97 T
+(if\050pos != 0\051 pos = \336nd\050pos+1, str) 134.37 521.97 T
+(.end\050\051, \324 \324\051;) 261.19 521.97 T
+(if\050pos == str) 134.37 510.97 T
+(.end\050\051\051 pos=0;) 181.4 510.97 T
+(return *this;) 134.37 499.97 T
+(    }) 116.37 488.97 T
+(    permute operator++\050int\051) 116.37 466.97 T
+(    {) 116.37 455.97 T
+(permute p = *this;) 134.37 444.97 T
+(operator++\050\051;) 134.37 433.97 T
+(return p;) 134.37 422.97 T
+(    }) 116.37 411.97 T
+(    friend int operator==\050const permute& p, const permute& q\051;) 116.37 389.97 T
+(private:) 116.37 367.97 T
+(    string str;) 116.37 356.97 T
+(    string::iterator pos;) 116.37 345.97 T
+(};) 116.37 334.97 T
+(inline int operator==\050const permute& p, const permute& q\051) 116.37 312.97 T
+({) 116.37 301.97 T
+(    return \050\050&p == &q\051 || \050\050p.pos == 0\051 && \050q.pos == 0\051\051\051;) 116.37 290.97 T
+(}) 116.37 279.97 T
+(class CircularShift {) 116.37 257.97 T
+(public:) 116.37 246.97 T
+(    CircularShift\050permutedT) 116.37 235.97 T
+(itles_t& store\051 : index\050store\051 {}) 221.56 235.97 T
+(    void operator\050\051\050const string& str\051 {) 116.37 213.97 T
+(for\050permute x\050str\051; x != permute\050\051; x++\051) 134.37 202.97 T
+(    index.insert\050T) 134.37 191.97 T
+(itlesPair_t\050*x, &str\051\051;) 198.56 191.97 T
+(    }) 116.37 180.97 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "23" 3
+%%Page: "22" 4
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(22) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+172.39 662.68 116.37 662.68 2 L
+V
+0.66 H
+0 Z
+N
+1 9 Q
+(APPENDIX 1.) 116.37 663.63 T
+254.94 662.76 252.43 662.76 2 L
+V
+N
+389.35 662.44 254.94 662.44 2 L
+V
+0.54 H
+N
+0 11 Q
+(Source for the KWIC program) 254.94 663.63 T
+2 9 Q
+(//    kwic.cc) 116.37 640.97 T
+(//    the KWIC program) 116.37 629.97 T
+(//    Georg T) 116.37 618.97 T
+(rausmuth, May 1995) 164.06 618.97 T
+(//) 116.37 607.97 T
+(#include <iostream.h>) 116.37 596.97 T
+(#include <pair) 116.37 585.97 T
+(.h>) 172.15 585.97 T
+(#include <list.h>) 116.37 574.97 T
+(#include <multimap.h>) 116.37 563.97 T
+(#include <algo.h>) 116.37 552.97 T
+(#include <vector) 116.37 541.97 T
+(.h>) 181.66 541.97 T
+(typedef vector<char> string;) 116.37 519.97 T
+(typedef multimap<string, string *, less<string> > permutedT) 116.37 508.97 T
+(itles_t;) 352.14 508.97 T
+(typedef list<string> T) 116.37 497.97 T
+(itles_t;) 199.58 497.97 T
+(typedef pair<const string, string *> T) 116.37 486.97 T
+(itlesPair_t;) 260.61 486.97 T
+(inline istream& operator>>\050istream& istr) 116.37 464.97 T
+(, string& mystr\051) 274.42 464.97 T
+({) 116.37 453.97 T
+(    char titleBuf) 116.37 442.97 T
+(fer[256];) 173.74 442.97 T
+(    char eatNewline;) 116.37 431.97 T
+(    istr) 116.37 409.97 T
+(.get\050titleBuf) 137.88 409.97 T
+(fer) 183.24 409.97 T
+(, 256, \324\134n\325\051;) 193.25 409.97 T
+(    istr) 116.37 398.97 T
+(.get\050eatNewline\051;) 137.88 398.97 T
+(    if\050istr && eatNewline==\325\134n\325\051 {) 116.37 376.97 T
+(mystr) 134.37 365.97 T
+(.erase\050mystr) 155.87 365.97 T
+(.begin\050\051,mystr) 205.38 365.97 T
+(.end\050\051\051;) 259.89 365.97 T
+(copy \050titleBuf) 134.37 354.97 T
+(fer) 186.23 354.97 T
+(, \336nd \050titleBuf) 196.24 354.97 T
+(fer) 248.6 354.97 T
+(, titleBuf) 258.61 354.97 T
+(fer+256, \325\1340\325\051,) 290.96 354.97 T
+(     back_inserter\050mystr\051\051;) 134.37 343.97 T
+(    }) 116.37 332.97 T
+(    return istr;) 116.37 321.97 T
+(}) 116.37 310.97 T
+(inline ostream& operator<<\050ostream& ostr) 116.37 288.97 T
+(, const string& mystr\051) 283.44 288.97 T
+({) 116.37 277.97 T
+(    string::const_iterator si;) 116.37 266.97 T
+(    for\050si=mystr) 116.37 255.97 T
+(.begin\050\051; si!=mystr) 173.13 255.97 T
+(.end\050\051; ostr << *si++\051;) 244.41 255.97 T
+(    return ostr;) 116.37 244.97 T
+(}) 116.37 233.97 T
+(class permute {) 116.37 211.97 T
+(public:) 116.37 200.97 T
+(    permute\050\051 : str\050\324\1340\325\051, pos\0500\051 {}) 116.37 189.97 T
+(    permute\050const string& s\051 : str\050s\051, pos\050str) 116.37 178.97 T
+(.begin\050\051\051 {}) 284.42 178.97 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "22" 4
+%%Page: "21" 5
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(21) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(NJ, 1993.) 144.72 664.3 T
+([8]) 116.37 646.3 T
+-0.32 (D.) 144.72 646.3 P
+-0.32 (R. Musser and A.) 156.94 646.3 P
+-0.32 (A. Stepanov.) 228.74 646.3 P
+3 F
+-0.32 (The Ada Generic Library: Linear List Processing) 282.53 646.3 P
+(Packages) 144.72 634.3 T
+0 F
+(. Springer Verlag, 1989.) 183.04 634.3 T
+([9]) 116.37 616.3 T
+0.04 (D.) 144.72 616.3 P
+0.04 (R. Musser and A.) 156.94 616.3 P
+0.04 (A. Stepanov. Algorithm-oriented generic libraries.) 229.84 616.3 P
+3 F
+0.04 (Software\321) 434.47 616.3 P
+(Practice and Experience) 144.72 604.3 T
+0 F
+(, 24\0507\051:623\32042, July 1994.) 243.58 604.3 T
+([10]) 116.37 586.3 T
+-0.27 (D.) 144.72 586.3 P
+-0.27 (L. Parnas. On the criteria to be used in decomposing systems into modules.) 156.94 586.3 P
+3 F
+-0.27 (Com-) 456.7 586.3 P
+(munications of the ACM) 144.72 574.3 T
+0 F
+(, 15\05012\051:1053\3208, Dec. 1972.) 242.22 574.3 T
+([11]) 116.37 556.3 T
+0.49 (D.) 144.72 556.3 P
+0.49 (L. Parnas. On the design and development of program families.) 156.94 556.3 P
+3 F
+0.49 (IEEE Transac-) 418.17 556.3 P
+(tions on Software Engineering) 144.72 544.3 T
+0 F
+(, 2:1\3209, Mar. 1976.) 266.67 544.3 T
+([12]) 116.37 526.3 T
+3.1 (A.) 144.72 526.3 P
+3.1 (A. Stepanov and M.) 156.94 526.3 P
+3.1 (Lee. The standard template library. Technical report,) 249 526.3 P
+(Hewlett-Packard Laboratories, May 1994.) 144.72 514.3 T
+([13]) 116.37 496.3 T
+(B.) 144.72 496.3 T
+(Stroustrup. Making a vector fit for a standard.) 156.39 496.3 T
+3 F
+(C++ Report) 342.47 496.3 T
+0 F
+(, Oct. 1994.) 392.36 496.3 T
+([14]) 116.37 478.3 T
+2.44 (W.) 144.72 478.3 P
+2.44 (Tracz. Software reuse myths.) 159.16 478.3 P
+3 F
+2.44 (ACM SIGSOFT Software Engineering Notes) 288.33 478.3 P
+0 F
+2.44 (,) 476.42 478.3 P
+(13\0501\051, Jan. 1988.) 144.72 466.3 T
+([15]) 116.37 448.3 T
+0.5 (J.) 144.72 448.3 P
+0.5 (D. Ullman.) 153.61 448.3 P
+3 F
+0.5 (Elements of ML programming) 201.83 448.3 P
+0 F
+0.5 (. Prentice-Hall, Englewood Cliffs, NJ,) 324.16 448.3 P
+(1994.) 144.72 436.3 T
+([16]) 116.37 418.3 T
+0.04 (M.) 144.72 418.3 P
+0.04 (J. Vilot. An introduction to the standard template library.) 158.61 418.3 P
+3 F
+0.04 (C++ Report) 389.51 418.3 P
+0 F
+0.04 (, 6\0508\051:22\320) 439.44 418.3 P
+(9, Oct. 1994.) 144.72 406.3 T
+([17]) 116.37 388.3 T
+0.07 (N.) 144.72 388.3 P
+0.07 (Wirth.) 156.94 388.3 P
+3 F
+0.07 (Algorithms + Data Structures = Programs) 185.34 388.3 P
+0 F
+0.07 (. Prentice-Hall Series in Auto-) 357.26 388.3 P
+(matic Computation. Prentice-Hall, Englewood Cliffs, NJ, 1976.) 144.72 376.3 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "21" 5
+%%Page: "20" 6
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(20) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1.07 (to paint the big picture and identify the key issues. I have also tried to indicate the key) 116.37 664.3 P
+(requirements that the solution must meet.) 116.37 653.3 T
+(In my group, we are currently running several projects to address some of the issues:) 116.37 636.3 T
+(\245) 125.97 623.3 T
+(We are rewriting \050\322reengineering\323\051 some small to medium-sized applications to use) 134.37 623.3 T
+(generic components. The goal is to gain a quantitative evaluation of using standard) 134.37 612.3 T
+(components both in terms of static metrics such as code size and in terms of runtime) 134.37 601.3 T
+(performance;) 134.37 590.3 T
+(\245) 125.97 577.3 T
+(We are designing some standard applications to help define a software process based) 134.37 577.3 T
+(on standard components. One of these is for an industrial partner;) 134.37 566.3 T
+(\245) 125.97 553.3 T
+(We are designing a generic catalog for window management; and) 134.37 553.3 T
+(\245) 125.97 540.3 T
+(We are examining the applicability of the approach to distributed and parallel) 134.37 540.3 T
+(applications.) 134.37 529.3 T
+(The last two are multi-year research projects.) 116.37 512.3 T
+4 F
+(Acknowledgments.) 116.37 489.3 T
+0 F
+-0.11 (Alex Stepanov not only explained to me the intricacies of STL but the) 199.7 489.3 P
+0.86 (whole philosophy and history of the work\321several times! He convinced me that a right) 116.37 478.3 P
+0.18 (technical approach exists and that it has to be comprehensive. Most, if not all, of the ideas) 116.37 467.3 P
+0.13 (in this paper were clari\336ed for me in conversations with Alex. Geor) 116.37 456.3 P
+0.13 (g T) 388.08 456.3 P
+0.13 (rausmuth wrote the) 401.46 456.3 P
+0.19 (KWIC program. Milon Mackey) 116.37 445.3 P
+0.19 (, Ren\216 Kl\232sch, Robert Barta, Geor) 243.5 445.3 P
+0.19 (g T) 382.04 445.3 P
+0.19 (rausmuth, Meng Lee) 395.5 445.3 P
+(and Alex Stepanov provided valuable comments on previous drafts of this paper) 116.37 434.3 T
+(.) 437.16 434.3 T
+(STL is available by anonymous ftp from bulter) 116.37 417.3 T
+(.hpl.hp.com in the directory stl.) 303.86 417.3 T
+1 14 Q
+(References) 116.37 386.76 T
+0 10 Q
+([1]) 116.37 369.03 T
+-0.27 (J.) 144.72 369.03 P
+-0.27 (Backus. Can programming be liberated from the von Neumann style? a functional) 153.61 369.03 P
+-0.2 (style and its algebra of programs.) 144.72 357.03 P
+3 F
+-0.2 (Communications of the ACM) 279.35 357.03 P
+0 F
+-0.2 (, 21\0508\051:613\32041, Aug.) 395.15 357.03 P
+(1978.) 144.72 345.03 T
+([2]) 116.37 327.03 T
+0.49 (C.) 144.72 327.03 P
+0.49 (Ghezzi, M.) 156.39 327.03 P
+0.49 (Jazayeri, and D.) 204.09 327.03 P
+0.49 (Mandrioli.) 271.98 327.03 P
+3 F
+0.49 (Fundamentals of Software Engineering) 317.46 327.03 P
+0 F
+0.49 (.) 476.42 327.03 P
+(Prentice-Hall, Englewood Cliffs, NJ, 1991.) 144.72 315.03 T
+([3]) 116.37 297.03 T
+1.43 (A.) 144.72 297.03 P
+1.43 (Koenig. File iterators.) 156.94 297.03 P
+3 F
+1.43 (Journal of object-oriented programming) 251.5 297.03 P
+0 F
+1.43 (, pages 59\32062,) 418.29 297.03 P
+(November December 1994.) 144.72 285.03 T
+([4]) 116.37 267.03 T
+-0.58 (A.) 144.72 267.03 P
+-0.58 (Koenig. Generic iterators.) 156.94 267.03 P
+3 F
+-0.58 (Journal of object-oriented programming) 261.56 267.03 P
+0 F
+-0.58 (, pages 69\32072,) 422.31 267.03 P
+(Sept. 1994.) 144.72 255.03 T
+([5]) 116.37 237.03 T
+-0.02 (A.) 144.72 237.03 P
+-0.02 (Koenig. Templates and generic algorithms.) 156.94 237.03 P
+3 F
+-0.02 (Journal of object-oriented Program-) 332.07 237.03 P
+(ming) 144.72 225.03 T
+0 F
+(, pages 45\3207, June 1994.) 164.72 225.03 T
+([6]) 116.37 207.03 T
+0.15 (D.) 144.72 207.03 P
+0.15 (McIlroy.) 156.94 207.03 P
+3 F
+0.15 (Mass-produced software components) 194.86 207.03 P
+0 F
+0.15 (, pages 88\32098. Petrocelli/Charter,) 344.6 207.03 P
+(1976.) 144.72 195.03 T
+([7]) 116.37 177.03 T
+0.34 (B.) 144.72 177.03 P
+0.34 (Meyer.) 156.39 177.03 P
+3 F
+0.34 (Object-oriented software construction) 187.82 177.03 P
+0 F
+0.34 (. Prentice-Hall, Englewood Cliffs,) 341.27 177.03 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "20" 6
+%%Page: "19" 7
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(19) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.61 (that object-oriented programming relies on inheritance whereas component programming) 116.37 664.3 P
+0.48 (relies on genericity) 116.37 653.3 P
+0.48 (. T) 193.33 653.3 P
+0.48 (raditional object-oriented languages treat genericity only at the data) 204.57 653.3 P
+1.8 (type level. But the separation of components into containers, algorithms, and iterators) 116.37 642.3 P
+-0.02 (allows genericity to be used to a much deeper extent. In particular) 116.37 631.3 P
+-0.02 (, generic algorithms may) 379.56 631.3 P
+0.12 (be written that work on many dif) 116.37 620.3 P
+0.12 (ferent kinds of data structures. It is, of course, possible to) 248.57 620.3 P
+(combine component programming and object-oriented programming techniques.) 116.37 609.3 T
+0.54 (Object-oriented programming insists on the consistency of interfaces but this consistency) 116.37 592.3 P
+0.09 (can be called \322syntactic.\323 A subclass may reimplement an interface as long as the parame-) 116.37 581.3 P
+1.78 (ters maintain the same types as before. The) 116.37 570.3 P
+4 F
+1.78 (r) 305.84 570.3 P
+1.78 (equir) 310.1 570.3 P
+1.78 (es) 332.7 570.3 P
+0 F
+1.78 ( clause of Eif) 341.03 570.3 P
+1.78 (fel [7] is a way of) 399.22 570.3 P
+-0.04 (strengthening the semantic content of an interface. In component programming, the execu-) 116.37 559.3 P
+-0.05 (tion complexity of an interface is also part of the contract between the component provider) 116.37 548.3 P
+(and component user) 116.37 537.3 T
+(.) 196.36 537.3 T
+1.03 (Since the T) 116.37 520.3 P
+1.03 (uring paper of Backus[1], there has been a signi\336cant amount of research in) 163.62 520.3 P
+-0.01 (functional programming. The function objects of STL make it possible to use some impor-) 116.37 509.3 P
+0.22 (tant functional techniques in an imperative language. But, rather than insisting on the lack) 116.37 498.3 P
+1.04 (of side-ef) 116.37 487.3 P
+1.04 (fects, STL uses side-ef) 155.27 487.3 P
+1.04 (fects in a disciplined way) 249.28 487.3 P
+1.04 (. Component programming, in) 354.43 487.3 P
+0.69 (general, must adopt the salient features from each paradigm as long as they can be com-) 116.37 476.3 P
+1.04 (bined ef) 116.37 465.3 P
+1.04 (\336ciently and naturally) 149.72 465.3 P
+1.04 (. STL containers represent ideas from object-oriented pro-) 238.92 465.3 P
+4.52 (gramming while algorithms and function objects represent ideas from functional) 116.37 454.3 P
+(programming.) 116.37 443.3 T
+-0.24 (Much of the work in \322software reuse\323 is aimed at \336nding so-called) 116.37 426.3 P
+3 F
+-0.24 (r) 382.85 426.3 P
+-0.24 (eusable components) 386.37 426.3 P
+0 F
+-0.24 (. A) 466.95 426.3 P
+0.68 (signi\336cant theme in that area is that the problems are nontechnical \050see Myth#1 in [14]\051.) 116.37 415.3 P
+0.91 (The emphasis of our work is that 1\051 the underlying problem is technical; 2\051 the dif) 116.37 404.3 P
+0.91 (\336cult) 458.36 404.3 P
+0.06 (problem is in discovering useful taxonomies of components and interfaces; 3\051 components) 116.37 393.3 P
+1.2 (must be designed as part of a family that forms a catalog; and 4\051 without the technical) 116.37 382.3 P
+(foundation, the nontechnical problems are not well-de\336ned.) 116.37 371.3 T
+4 14 Q
+(7  Summary and conclusions) 116.37 341.64 T
+0 10 Q
+0.21 (In this paper) 116.37 320.3 P
+0.21 (, I have ar) 166.38 320.3 P
+0.21 (gued in general about the necessity of a component-based approach) 206.82 320.3 P
+-0.16 (to software engineering, de\336ned exactly what kinds of components are needed, and given a) 116.37 309.3 P
+0.74 (component-based solution to the standard KWIC problem\321using the STL standard C++) 116.37 298.3 P
+0.15 (library) 116.37 287.3 P
+0.15 (. The development of a component-based paradigm is the major technical challenge) 142.38 287.3 P
+0.17 (facing software engineering today) 116.37 276.3 P
+0.17 (. There may be many nontechnical issues \050e.g. or) 252.57 276.3 P
+0.17 (ganiza-) 449.49 276.3 P
+-0.2 (tional\051 facing us as well but unless we solve the technical problem, the bene\336ts of solutions) 116.37 265.3 P
+-0.12 (to the nontechnical issues will be illusory) 116.37 254.3 P
+-0.12 (. I have outlined an approach for solving the tech-) 280.57 254.3 P
+(nical problem.) 116.37 243.3 T
+0.44 (This approach is based on a taxonomy of types of software components and a set of laws) 116.37 226.3 P
+0.33 (that must be obeyed by components. Such an approach can provide a much needed scien-) 116.37 215.3 P
+0.46 (ti\336c foundation for the \336eld of software engineering. But much work remains to be done,) 116.37 204.3 P
+1.06 (both at the fundamental level and at the empirical level. Because only a comprehensive) 116.37 193.3 P
+0.23 (solution will work, it is not possible to address all the issues in a single paper) 116.37 182.3 P
+0.23 (. I have tried) 427.68 182.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "19" 7
+%%Page: "18" 8
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(18) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.75 (allocation and deallocation policies. Allocators extend the genericity of STL components) 128.37 664.3 P
+(to different memory models.) 128.37 653.3 T
+(2.) 124.47 640.3 T
+-0.43 (Generality: this algorithm is the most generic description of linear search and makes as) 134.37 640.3 P
+(few assumptions as possible.) 134.37 629.3 T
+(3.) 124.47 616.3 T
+(Abstraction: the algorithm is as abstract as possible; it uses the abstract operations of) 134.37 616.3 T
+(equality, dereference, and increment. The iterators it uses in its interface are) 134.37 605.3 T
+(abstractions of container organizations.) 134.37 594.3 T
+(4.) 124.47 581.3 T
+(Modularity: the separation of the iterator is responsible for the simplicity of the) 134.37 581.3 T
+(algorithm.) 134.37 570.3 T
+0.37 (Component programming will take hold only if component-based software engineering is) 116.37 553.3 P
+0.25 (part of the student\325) 116.37 542.3 P
+0.25 (s education. A catalog such as STL is a good source of examples and a) 192.4 542.3 P
+0.65 (good starting point. W) 116.37 531.3 P
+0.65 (e can teach software engineering concretely) 207.52 531.3 P
+0.65 (. Current textbooks are) 385.33 531.3 P
+(either only abstract or concentrate on line-by-line development.) 116.37 520.3 T
+4 14 Q
+(6  Relationship to other work) 116.37 490.64 T
+0 10 Q
+0.58 (The work reported here is based directly on STL [12] and the work leading to it, such as) 116.37 469.15 P
+0.9 ([9]. The need for a multiplicity of abstractions is clearly indicated in the title of W) 116.37 457 P
+0.9 (irth\325) 458.36 457 P
+0.9 (s) 475.03 457 P
+1.24 (book, \322Algorithms + Data Structures = Programs\323 [17] and is further developed in [8].) 116.37 444.84 P
+0.61 (Some design issues of STL have been discussed in [5, 4, 3, 13]. The use of STL is illus-) 116.37 432.69 P
+(trated in [16].) 116.37 420.54 T
+0.84 (In general, the work here is a step in the direction of \336nding appropriate modularization) 116.37 402.54 P
+1.3 (techniques. For example, with information hiding [10], Parnas introduced the notion of) 116.37 391.54 P
+0.05 (decomposing software based on the design decisions that we want a module to hide. Com-) 116.37 380.54 P
+0.39 (ponent programming requires that each catalog contains a small number of types of mod-) 116.37 369.54 P
+0.4 (ules. The modularization in STL is based on generic containers, algorithms, iterators, and) 116.37 358.54 P
+2.2 (function objects. This modularization allows the same algorithms to apply to a lar) 116.37 347.54 P
+2.2 (ge) 469.48 347.54 P
+0.78 (number of containers, thus reducing the number of modules that need to be written. The) 116.37 336.54 P
+0.27 (approach is loosely related to Parnas\325) 116.37 325.54 P
+0.27 (s program families [1) 266.88 325.54 P
+0.27 (1]. Parnas\325) 353.15 325.54 P
+0.27 (s approach regards a) 396.19 325.54 P
+0.21 (program being developed as a member of a family of possible programs. The generic pro-) 116.37 314.54 P
+0.12 (gramming approach views a component as implementing a family of components all shar-) 116.37 303.54 P
+2.98 (ing the same design decisions about the context in which they will be used. This) 116.37 292.54 P
+(information is captured by the generic \050template\051 interface.) 116.37 281.54 T
+0.41 (Component programming can also be contrasted with other paradigms such as object-ori-) 116.37 264.54 P
+0.04 (ented and functional programming. A complete comparison requires a long discussion and) 116.37 253.54 P
+0.12 (even some research but some brief comparisons are possible. The most obvious dif) 116.37 242.54 P
+0.12 (ference) 449.5 242.54 P
+1.32 (between component programming and the other paradigms is that component program-) 116.37 231.54 P
+0.12 (ming relies on components of dif) 116.37 220.54 P
+0.12 (ferent types, that is, the component space contains dif) 249.29 220.54 P
+0.12 (fer-) 464.49 220.54 P
+0.06 (ent types of abstractions. It is dif) 116.37 209.54 P
+0.06 (\336cult to compose most industrial applications from only a) 247.35 209.54 P
+(single type of abstraction whether it is objects or functions.) 116.37 198.54 T
+0.14 (Another dif) 116.37 181.54 P
+0.14 (ference between object-oriented programming and component programming is) 162.71 181.54 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "18" 8
+%%Page: "17" 9
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(17) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1.49 (no type checking yet the programmer does not overspecify the type requirements. The) 116.37 664.3 P
+(compiler) 116.37 652.3 T
+(\325) 152.29 652.3 T
+(s template processor does a fair amount of type inference.) 155.07 652.3 T
+0.18 (For example, we cannot write the program) 116.37 634.3 P
+3 F
+0.18 (\336nd) 290.37 634.3 P
+0 F
+0.18 ( shown in Figure 1 so simply in a language) 305.37 634.3 P
+1.48 (like ML which has a more restricted static typing rule. ML [15]would require that the) 116.37 623.3 P
+1.38 (equality test for values be resolved by the programmer to resolve the ambiguity of the) 116.37 612.3 P
+-0.06 (equality operator) 116.37 601.3 P
+-0.06 (, for example to) 183.95 601.3 P
+3 F
+-0.06 (integer) 249.51 601.3 P
+0 F
+-0.06 ( equality) 277.84 601.3 P
+-0.06 (. This, of course, immediately reduces the) 311.84 601.3 P
+(genericity of the component and makes it special-purpose.) 116.37 590.3 T
+0.39 (An important direction for the design of programming languages is to support the writing) 116.37 573.3 P
+0.18 (of generic and ef) 116.37 562.3 P
+0.18 (\336cient components. The right kind of support will give the programmer a) 184.2 562.3 P
+0.31 (lot of power at little cost in language complexity) 116.37 551.3 P
+0.31 (. The C++ template is a good example of) 312.66 551.3 P
+-0.24 (such a facility) 116.37 540.3 P
+-0.24 (. Of course, language features alone are not enough and appropriate tools will) 171.34 540.3 P
+0.21 (be necessary) 116.37 529.3 P
+0.21 (. Currently) 166.74 529.3 P
+0.21 (, debugging of generic programs is rather dif) 209.63 529.3 P
+0.21 (\336cult both due to gen-) 389.76 529.3 P
+-0.22 (erally poor compiler messages and due to lack of debugger support. One particularly useful) 116.37 518.3 P
+0.03 (tool would be a template \322analyzer\323 that can check the compatibility of a template compo-) 116.37 507.3 P
+1.1 (nent with your particular component. It would have to check whether all the operations) 116.37 496.3 P
+0.41 (required by the template are provided by your component. Currently) 116.37 485.3 P
+0.41 (, this compatibility is) 393.24 485.3 P
+(checked by the compiler) 116.37 474.3 T
+(.) 213.85 474.3 T
+4 12 Q
+(5.4 Software engineering education) 116.37 451.97 T
+0 10 Q
+0.58 (The decision of what we should teach in a software engineering course is a very dif) 116.37 435.3 P
+0.58 (\336cult) 458.36 435.3 P
+0.81 (one today) 116.37 423.3 P
+0.81 (. The same lack of a scienti\336c foundation that causes the problems of the soft-) 155.69 423.3 P
+2.93 (ware industry is the source of the education dilemma as well. A component-based) 116.37 411.3 P
+1.09 (approach implies that we must teach component-based design and implementation from) 116.37 399.3 P
+0.72 (the beginning. W) 116.37 387.3 P
+0.72 (e must teach the progression of how to build components, how to build) 186.17 387.3 P
+0.35 (catalogs, and how to build applications using catalogs. The taxonomy of components into) 116.37 375.3 P
+0.68 (algorithms and containers also motivates a more systematic study of algorithms and data) 116.37 363.3 P
+2.26 (structures. The taxonomies of containers, algorithms, and iterators, with emphasis on) 116.37 351.3 P
+-0.22 (appropriate interfaces and complexity of the implementation, allow us to approach the \336eld) 116.37 339.3 P
+(in a systematic way) 116.37 327.3 T
+(.) 194.32 327.3 T
+1.25 (The component-based approach enables a concrete treatment of software engineering\321) 116.37 309.3 P
+1.74 (solving one of software engineering education\325) 116.37 298.3 P
+1.74 (s long-standing problems. For example,) 313.09 298.3 P
+-0.1 (many of the principles that we believe are important are in fact dif) 116.37 287.3 P
+-0.1 (\336cult to demonstrate to a) 379.89 287.3 P
+0.29 (beginning student. Many of these principles can be demonstrated rather well with compo-) 116.37 276.3 P
+0.64 (nents from STL. For example, the) 116.37 265.3 P
+3 F
+0.64 (\336nd) 258.54 265.3 P
+0 F
+0.64 ( component in Figure 1, despite its simple appear-) 273.54 265.3 P
+(ance, demonstrates several principles[2]:) 116.37 254.3 T
+(1.) 124.47 241.3 T
+(Separation of concern: this algorithm only is concerned with processing based on a) 134.37 241.3 T
+-0.32 (minimum of assumptions\321no memory organization \050the concern of the iterator\051 and no) 128.37 230.3 P
+(memory allocation \050the concern of the container\051. Actually, STL even removes the) 128.37 219.3 T
+-0.09 (memory allocation concern from the container by parameterizing all containers with an) 128.37 208.3 P
+(additional) 128.37 197.3 T
+3 F
+(allocator) 170.87 197.3 T
+0 F
+( parameter. An allocator captures the memory model being used. A) 207.54 197.3 T
+-0.06 (default allocator is provided and requirements for user-defined allocators are given. An) 128.37 186.3 P
+(allocator defines the concepts of memory locations, their sizes and addresses, and) 128.37 175.3 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "17" 9
+%%Page: "16" 10
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(16) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.59 (using standard catalogs. Component vendors specialize in algorithms and data structures,) 116.37 664.3 P
+0.96 (application builders specialize in architectures and application requirements. As in other) 116.37 652.3 P
+0.72 (engineering disciplines, we will be able to develop dif) 116.37 640.3 P
+0.72 (ferent specialties in software engi-) 338.31 640.3 P
+1.39 (neering. The division of the industry into component builders and system builders will) 116.37 628.3 P
+1.75 (reinforce the development and adoption of standard interfaces. The discovery of good) 116.37 616.3 P
+0.14 (interfaces in software is as hard, if not harder) 116.37 604.3 P
+0.14 (, than in hardware engineering. Indeed, mod-) 297.86 604.3 P
+-0.01 (ularization techniques and interface design are two sides of the same coin and dividing our) 116.37 592.3 P
+(concerns into component design and system design will speed advances in both.) 116.37 580.3 T
+4 12 Q
+(5.2 Software design) 116.37 556.97 T
+0 10 Q
+0.59 (One of the questions in software design methodology) 116.37 540.3 P
+0.59 (, to which a satisfactory answer has) 333.46 540.3 P
+0.8 (not been found, is whether design is a top-down or bottom-up activity? Component pro-) 116.37 528.3 P
+-0.21 (gramming answers this question concretely and pragmatically: Y) 116.37 516.3 P
+-0.21 (ou must know the types of) 374.14 516.3 P
+2.71 (components that are available. Y) 116.37 504.3 P
+2.71 (ou must be familiar with all the standard catalogs.) 257.56 504.3 P
+0.25 (Depending on your specialty) 116.37 492.3 P
+0.25 (, you must also be familiar with several special-purpose cata-) 231.73 492.3 P
+0.14 (logs. The task of design is to devise a particular con\336guration\321architecture\321that enables) 116.37 480.3 P
+1.42 (the interconnection of appropriate components. In the implementation step, you simply) 116.37 468.3 P
+0.03 (look in catalogs to \336nd the components. Occasionally) 116.37 456.3 P
+0.03 (, you may need to write a component) 330.38 456.3 P
+(yourself, but this should be the exception.) 116.37 444.3 T
+-0.06 (A complete software process based on component programming is yet to be de\336ned. Com-) 116.37 426.3 P
+0.1 (ponent programming addresses the design and implementation steps of the process. It lim-) 116.37 415.3 P
+1.14 (its the design space and gives the designer a vocabulary for decomposing the design in) 116.37 404.3 P
+0.67 (terms of this vocabulary) 116.37 393.3 P
+0.67 (. For example, STL of) 214.67 393.3 P
+0.67 (fers several types of linear and associative) 306.05 393.3 P
+0.69 (containers and adapters for obtaining variations of these containers. Having analyzed the) 116.37 382.3 P
+1.01 (problem and identi\336ed the kinds of objects and operations you need, the design process) 116.37 371.3 P
+-0.03 (starts by choosing the needed containers. The choice is based on the kinds of objects in the) 116.37 360.3 P
+0.65 (application and the needed operations. For example, may there exist several copies of an) 116.37 349.3 P
+0.52 (object? Is fast access to arbitrary objects required? The operations required by the design) 116.37 338.3 P
+1.03 (are made up from individual STL algorithms or by combining several appropriate ones.) 116.37 327.3 P
+-0.05 (The primary design guideline provided by STL is the decomposition of the design in terms) 116.37 316.3 P
+-0.25 (of the \336ve types of abstractions: containers, algorithms, adapters, function objects, and iter-) 116.37 305.3 P
+(ators.) 116.37 294.3 T
+4 12 Q
+(5.3 Language design) 116.37 271.97 T
+0 10 Q
+0.09 (One of the key requirements for the success of component programming is the availability) 116.37 255.3 P
+0.67 (of components that are generic and ef) 116.37 243.3 P
+0.67 (\336cient. In STL, this goal is achieved by using C++) 270.75 243.3 P
+0.62 (templates. The template facility of C++ combines the advantages of highly generic code,) 116.37 231.3 P
+0.5 (type safety) 116.37 219.3 P
+0.5 (, and code ef) 159.83 219.3 P
+0.5 (\336ciency) 212.25 219.3 P
+0.5 (. This is due to requiring minimum type information from) 243.26 219.3 P
+0.34 (the template de\336nition, and completing the type checking at template instantiation time\321) 116.37 207.3 P
+1.4 (still at compile-time. This approach strikes the right balance between compiling versus) 116.37 195.3 P
+-0.14 (interpreting or static versus dynamic languages: the compiled code is ef) 116.37 183.3 P
+-0.14 (\336cient and contains) 401.43 183.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "16" 10
+%%Page: "15" 11
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(15) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 F
+(Concern 2: The idea of component-based softwar) 116.37 664.3 T
+(e construction is an old one and it) 326.17 664.3 T
+(hasn\325t worked befor) 116.37 652.3 T
+(e. Why should it work now?) 202.85 652.3 T
+0 F
+0.51 (There are several answers to this con-) 324.81 652.3 P
+-0.04 (cern. First, a comprehensive solution has many ingredients: systematic study of algorithms) 116.37 641.3 P
+1.68 (and data structures, combination of programming techniques from multiple paradigms,) 116.37 630.3 P
+0.48 (suf) 116.37 619.3 P
+0.48 (\336cient programming language support for genericity\321all of these available in a main-) 128.41 619.3 P
+0.99 (stream language. Indeed, there has been progress along all these lines and only recently) 116.37 608.3 P
+-0.03 (have all reached a level of maturity so that they can be combined. Second, component pro-) 116.37 597.3 P
+0.34 (gramming relies on proper software modularization. Our understanding of modularity has) 116.37 586.3 P
+0.37 (been increasing over time. The seminal work by Parnas on information hiding and modu-) 116.37 575.3 P
+-0.21 (larization in general, the ef) 116.37 564.3 P
+-0.21 (\336cient support of abstraction facilities in a mainstream program-) 222.84 564.3 P
+1.56 (ming language such as C++, functional programming techniques such as closures, and) 116.37 553.3 P
+0.33 (compiler techniques aiding in type inference, are some of the important milestones in this) 116.37 542.3 P
+0.03 (progression. The modularity approach of STL is in a way more conservative than previous) 116.37 531.3 P
+0.8 (approaches. Rather than starting with a blank piece of paper and deciding what modules) 116.37 520.3 P
+0.91 (are needed, STL postulates that all software must be built out of a few types of compo-) 116.37 509.3 P
+-0.06 (nents. But this is the way it has to be! Only by limiting the number of kinds of components) 116.37 498.3 P
+0.18 (can we hope to educate engineers in the design and use of components. By analogy to cir-) 116.37 487.3 P
+0.86 (cuit design, we only need components such as resistors and capacitors, not thousands of) 116.37 476.3 P
+-0.21 (specially-crafted ones. W) 116.37 465.3 P
+-0.21 (e may need many dif) 217.06 465.3 P
+-0.21 (ferent kinds of resistors\321provided by dif) 299.91 465.3 P
+-0.21 (fer-) 464.49 465.3 P
+(ent vendors\321but the number of component types is limited.) 116.37 454.3 T
+0.01 (In short, progress in many areas of computer science has laid the foundation for successful) 116.37 437.3 P
+0.65 (component programming. More important, a component programming paradigm is a key) 116.37 426.3 P
+0.71 (technical challenge to software engineering that must be met. W) 116.37 415.3 P
+0.71 (ithout confronting it, we) 379.56 415.3 P
+0.36 (will continue to use individual programming language statements as our software compo-) 116.37 404.3 P
+(nents.) 116.37 393.3 T
+4 14 Q
+(5  Implications of component programming) 116.37 363.64 T
+0 10 Q
+0.63 (Changing our software paradigm from line-by-line programming to component program-) 116.37 342.3 P
+0 (ming has profound and far) 116.37 330.3 P
+0 (-reaching implications for software engineering both in terms of) 222.28 330.3 P
+0.22 (what is needed to make the change possible and in its impact on other aspects of the \336eld.) 116.37 318.3 P
+(In this section, I review what is required to make it succeed and the bene\336ts to be gained.) 116.37 306.3 T
+4 12 Q
+(5.1 Software industry) 116.37 282.97 T
+0 10 Q
+-0.2 (The practical bene\336t of component programming is the conversion of the software industry) 116.37 266.3 P
+-0.17 (into a component-based industry) 116.37 254.3 P
+-0.17 (. Such a transformation is necessary to solve the industry\325) 246.03 254.3 P
+-0.17 (s) 475.03 254.3 P
+0.91 (problems: even the most successful software or) 116.37 242.3 P
+0.91 (ganizations consistently suf) 311.05 242.3 P
+0.91 (fer from poor) 423.24 242.3 P
+0.7 (quality and late delivery) 116.37 230.3 P
+0.7 (. W) 214.74 230.3 P
+0.7 (e need a software components industry analogous to the chip) 229.08 230.3 P
+1.28 (industry that has propelled the growth of the computer industry) 116.37 218.3 P
+1.28 (. By \336xing the kinds of) 380.29 218.3 P
+0.75 (components and the interface to those components, as in STL, it is possible for dif) 116.37 206.3 P
+0.75 (ferent) 455.6 206.3 P
+0.57 (vendors to provide software catalogs based on their special expertise\321encryption, image) 116.37 194.3 P
+2.27 (processing, and so on. Application vendors\321system integrators\321then build solutions) 116.37 182.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "15" 11
+%%Page: "14" 12
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(14) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1.42 (I have presented here\321the apparent basic level of the components\321and the other is a) 116.37 664.3 P
+(more general one about the feasibility of the whole approach.) 116.37 652.3 T
+4 F
+(Concern 1: The components such as I have described ar) 116.37 628.3 T
+(e \322low-level\323; instead, we) 354.24 628.3 T
+(need application-oriented large-grained components.) 116.37 616.3 T
+0 F
+3.41 (There are two answers to this) 344.42 616.3 P
+0.54 (concern. First, the granularity of components is a tricky issue. The apparent simplicity of) 116.37 605.3 P
+0.59 (STL components is deceptive: The genericity of the components renders them quite gen-) 116.37 594.3 P
+-0.04 (eral-purpose and powerful. They are appropriate for decomposing many common software) 116.37 583.3 P
+0.37 (problems. W) 116.37 572.3 P
+0.37 (e can get lar) 167.6 572.3 P
+0.37 (ger components by combining such powerful components in dif-) 217.12 572.3 P
+0.07 (ferent ways. For example, we can build a permuted index component from the KWIC pro-) 116.37 561.3 P
+0.33 (gram in the previous section. Unix has already demonstrated the usefulness of small tools) 116.37 550.3 P
+0.47 (as building blocks for more powerful, special-purpose, tools. The next step in component) 116.37 539.3 P
+0.19 (programming should be to develop other catalogs, dealing with dif) 116.37 528.3 P
+0.19 (ferent domains, such as) 384.5 528.3 P
+(window management.) 116.37 517.3 T
+0.64 (But a deeper answer to the \336rst concern is that to create a component-oriented approach,) 116.37 500.3 P
+0.75 (we must \336rst start with the basic software components. More important than the compo-) 116.37 489.3 P
+0.27 (nents themselves is a science and theory of software components that enables the creation) 116.37 478.3 P
+0.03 (of standard components that are guaranteed to work together) 116.37 467.3 P
+0.03 (. W) 358.75 467.3 P
+0.03 (e must develop such a the-) 372.42 467.3 P
+-0.12 (ory and use it in the development of components and a component-based design methodol-) 116.37 456.3 P
+0.21 (ogy) 116.37 445.3 P
+0.21 (. The STL catalog shows the elements of such a theory: a classi\336cation of components) 130.72 445.3 P
+-0.2 (and a compatible component interface design. W) 116.37 434.3 P
+-0.2 (e should not expect to be able to take lar) 310.14 434.3 P
+-0.2 (ge) 469.48 434.3 P
+0.66 (pieces of software and connect them to each other without a \336rm scienti\336c foundation at) 116.37 423.3 P
+0.02 (the most basic level. The lack of such a foundation is responsible for the lack of success in) 116.37 412.3 P
+(component-based software development.) 116.37 401.3 T
+0.67 (One of the principles underlying STL is a consistent set of requirements on components.) 116.37 384.3 P
+0.74 (The notion of user) 116.37 373.3 P
+0.74 (-de\336ned types in programming languages was a fundamental idea that) 192 373.3 P
+0.21 (has evolved over time. An important lesson learned in language design has been to ensure) 116.37 362.3 P
+0.64 (that user) 116.37 351.3 P
+0.64 (-de\336ned types are treated by the language exactly as built-in types. STL extends) 150.98 351.3 P
+0.08 (this notion to user) 116.37 340.3 P
+0.08 (-de\336ned components. For example, an algorithm component can operate) 188.35 340.3 P
+2.95 (equally well on user) 116.37 329.3 P
+2.95 (-de\336ned containers\321built from language built-in types such as) 205.83 329.3 P
+1.84 (arrays\321as on STL-de\336ned containers. Such a property requires concrete requirements) 116.37 318.3 P
+-0.23 (from component designers. Every type of component is required to provide a speci\336c set of) 116.37 307.3 P
+0.01 (interfaces. For example, every container is required to provide an equality operator as well) 116.37 296.3 P
+-0 (as an inequality operator) 116.37 285.3 P
+-0 (. More importantly) 214.4 285.3 P
+-0 (, each required interface must meet stated com-) 289.57 285.3 P
+-0.01 (plexity requirements. These requirements are stated explicitly and in detail in the STL def-) 116.37 274.3 P
+0.09 (inition document. These kinds of requirements are the elements of a theory that enables us) 116.37 263.3 P
+1.09 (to write components that can work both with existing components and components that) 116.37 252.3 P
+(will be built in the future.) 116.37 241.3 T
+0.72 (There is other work to be done as well, such as trying the approach on real applications,) 116.37 224.3 P
+0.01 (developing catalogs for other domains, de\336ning a complete software process, etc. But eve-) 116.37 213.3 P
+-0.09 (rything depends on pinning down the details of what I have referred to as a \322theory of soft-) 116.37 202.3 P
+(ware components\323 and this is best done at the level of fundamental components.) 116.37 191.3 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "14" 12
+%%Page: "13" 13
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(13) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.86 (ment, window management, and so on. If we had a text processing catalog, we may not) 116.37 664.3 P
+0.07 (have had to write any new code at all for this program because) 116.37 653.3 P
+3 F
+0.07 (Cir) 370.26 653.3 P
+0.07 (cularShift) 383.23 653.3 P
+0 F
+0.07 ( would proba-) 422.68 653.3 P
+(bly have been available.) 116.37 642.3 T
+2.08 (Fourth, this solution combines elements from imperative and functional programming) 116.37 416.92 P
+-0.15 (together with abstract data types and information hiding. Just as the STL catalog contains a) 116.37 405.92 P
+-0.09 (variety of dif) 116.37 394.92 P
+-0.09 (ferent types of components, the design approach is also multi-paradigm, com-) 168.22 394.92 P
+1.53 (bining the salient features of the dif) 116.37 383.92 P
+1.53 (ferent approaches. In particular) 267.57 383.92 P
+1.53 (, containers provide) 396.71 383.92 P
+3 F
+(generic abstract data types) 116.37 372.92 T
+0 F
+( and function objects provide) 224.97 372.92 T
+3 F
+(closur) 344.12 372.92 T
+(es) 368.75 372.92 T
+0 F
+(.) 377.08 372.92 T
+1.17 (Each component in this solution encapsulates a particular design decision and therefore) 116.37 355.92 P
+0.69 (meets the goal of design-for) 116.37 344.92 P
+0.69 (-change. Furthermore, because we are using mainly standard) 231.12 344.92 P
+1.47 (components, it is feasible to try several dif) 116.37 333.92 P
+1.47 (ferent design alternatives without exorbitant) 296.42 333.92 P
+0.56 (implementation cost. For example, we can generate a permuted index \336rst in an unsorted) 116.37 322.92 P
+0.33 (list and then sort it. W) 116.37 311.92 P
+0.33 (e would use a list container and a sort algorithm from STL. W) 206.09 311.92 P
+0.33 (e can) 457.78 311.92 P
+(then compare the performance of both solutions before selecting a \336nal solution.) 116.37 300.92 T
+4 14 Q
+(4  Skepticism about component programming) 116.37 271.25 T
+0 10 Q
+0.56 (In the previous section, I have shown an example of component-based software design. I) 116.37 249.92 P
+0.53 (have tried to show the bene\336ts to be gained from such an approach to software engineer-) 116.37 237.92 P
+0.73 (ing. But because the vision of component programming is as old as the \336eld of software) 116.37 225.92 P
+0.07 (engineering itself, there is some built-in skepticism about the probability of success of any) 116.37 213.92 P
+0.38 (new solution. In this section, I address two speci\336c concerns that may arise for the reader) 116.37 201.92 P
+0.21 (in encountering component programming initially: one concern is speci\336c to the approach) 116.37 189.92 P
+116.37 170.94 478.92 670.97 C
+116.37 430.58 478.92 638.97 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+155.92 434.79 439.38 631.45 R
+7 X
+0 0 0 1 0 0 0 K
+V
+2 9 Q
+0 X
+(class CircularShift {) 155.92 625.45 T
+(public:) 155.92 614.45 T
+(    CircularShift\050permutedT) 155.92 603.45 T
+(itles_t& store\051 : index\050store\051 {}) 261.11 603.45 T
+(    void operator\050\051\050const string& str\051 {) 155.92 581.45 T
+(for\050permute x\050str\051; x != permute\050\051; x++\051) 173.92 570.45 T
+(    index.insert\050T) 173.92 559.45 T
+(itlesPair_t\050*x, &str\051\051;) 238.1 559.45 T
+(    }) 155.92 548.45 T
+(private:) 155.92 537.45 T
+(    permutedT) 155.92 526.45 T
+(itles_t& index;) 209.11 526.45 T
+(};) 155.92 515.45 T
+(inline ostream& operator<< \050ostream& out, const T) 155.92 493.45 T
+(itlesPair_t& p\051) 357.67 493.45 T
+({) 155.92 482.45 T
+(    return out << p.\336rst << \322:\134n\134t \322 << \050*\050p.second\051\051 << \324\134n\325;) 155.92 471.45 T
+(}) 155.92 460.45 T
+4 F
+(Fig. 4.) 155.92 438.45 T
+0 F
+(Code for function object CircularShift and <<) 181.92 438.45 T
+116.37 170.94 478.92 670.97 C
+-8.35 24.95 603.65 816.95 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "13" 13
+%%Page: "12" 14
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(12) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.22 (stream. The same copy operation is being used for moving data, either from input or to out-) 116.37 664.3 P
+-0.14 (put. Each time, it uses the appropriate output operation associated with the relevant stream.) 116.37 653.3 P
+0.26 (The second statement uses the) 116.37 642.3 P
+3 F
+0.26 (for_each) 241.28 642.3 P
+0 F
+0.26 ( algorithm of STL which applies a function object) 276.83 642.3 P
+0.29 (to every element in a range. In the function object) 116.37 631.3 P
+3 F
+0.29 (Cir) 321.17 631.3 P
+0.29 (cularShift,) 334.14 631.3 P
+0 F
+0.29 ( we see the use of a com-) 376.09 631.3 P
+-0.16 (ponent that encapsulates both an algorithm and its state.) 116.37 620.3 P
+3 F
+-0.16 (Cir) 341.04 620.3 P
+-0.16 (cularShift) 354.01 620.3 P
+0 F
+-0.16 ( forms all the circular) 393.46 620.3 P
+0.31 (shifts of its ar) 116.37 609.3 P
+0.31 (gument and inserts them into the multimap with which it was instantiated\321) 171.85 609.3 P
+3 F
+1.66 (KWICindex) 116.37 598.3 P
+0 F
+1.66 (, in this case. The code for the) 163.03 598.3 P
+2 F
+1.84 (operator<<) 299.04 598.3 P
+0 F
+1.66 ( and the function object) 347.96 598.3 P
+3 F
+1.66 (Cir) 453.18 598.3 P
+1.66 (cu-) 466.15 598.3 P
+(larShift) 116.37 587.3 T
+0 F
+( is shown in Figure 4.) 146.38 587.3 T
+1.4 (The distinctive feature of a function object is that it de\336nes an application operator) 116.37 570.3 P
+2 F
+1.56 ( \050\051) 465.42 570.3 P
+0 F
+1.4 (,) 476.42 570.3 P
+0.68 (which allows the object to be applied. Such an object is used in functional programming) 116.37 559.3 P
+0.71 (extensively and is known as a) 116.37 548.3 P
+3 F
+0.71 (closur) 242.28 548.3 P
+0.71 (e) 266.91 548.3 P
+0 F
+0.71 (. A closure encapsulates a function together with a) 271.35 548.3 P
+1.33 (state. In the case of) 116.37 537.3 P
+3 F
+1.33 (Cir) 202.42 537.3 P
+1.33 (cularShift) 215.39 537.3 P
+0 F
+1.33 (, the state of the computation is kept in the multimap) 254.84 537.3 P
+3 F
+0.36 (index) 116.37 526.3 P
+0 F
+0.36 (, a private variable in) 138.03 526.3 P
+3 F
+0.36 (Cir) 227.02 526.3 P
+0.36 (cularShift) 239.99 526.3 P
+0 F
+0.36 (. C++ templates allow the use of this useful tech-) 279.44 526.3 P
+(nique in a traditionally imperative setting.) 116.37 515.3 T
+3 F
+-0.2 (Cir) 116.37 498.3 P
+-0.2 (cularShift) 129.34 498.3 P
+0 F
+-0.2 ( produces the circularly-shifted lines by iterating through a \322virtual\323 container) 168.79 498.3 P
+0.03 (and inserting each circularly-shifted line into its) 116.37 487.3 P
+3 F
+0.03 (index) 310.73 487.3 P
+0 F
+0.03 (. The container is virtual because we) 332.39 487.3 P
+0.18 (have actually de\336ned an iterator) 116.37 476.3 P
+0.18 (,) 245 476.3 P
+3 F
+0.18 (permute) 250.18 476.3 P
+0 F
+0.18 (, which reads the original input line, maintaining) 282.95 476.3 P
+-0.1 (the state of iteration through the container) 116.37 465.3 P
+-0.1 (. Only if the iterator is dereferenced, does it actu-) 282.96 465.3 P
+0.81 (ally build and return the next circularly-shifted con\336guration. As with any other iterator) 116.37 454.3 P
+0.81 (,) 476.42 454.3 P
+-0.2 (we have to de\336ne ++ and *. The code for permute is shown in Figure 5. The constructor for) 116.37 443.3 P
+3 F
+0.64 (permute) 116.37 432.3 P
+0 F
+0.64 ( with a parameter sets up the initial con\336guration of a shifted line. A constructor) 149.14 432.3 P
+0.13 (with no parameters returns an iterator that matches the end of a shifted con\336guration. This) 116.37 421.3 P
+0.01 (is the mechanism used for terminating the iteration through the permutations. This compo-) 116.37 410.3 P
+(nent illustrates the use of iterators in developing new components.) 116.37 399.3 T
+0.69 (The complete code for the program is given in Appendix I. Appendix II shows a sample) 116.37 382.3 P
+0.08 (input \336le and the output produced by our program. At this point, I summarize the essential) 116.37 371.3 P
+(characteristics of this solution.) 116.37 360.3 T
+-0.11 (First, the program is quite short, owing to our approach of using standard components. The) 116.37 343.3 P
+0.51 (brevity of the program enables us to reproduce the entire program here. It is important in) 116.37 332.3 P
+2.15 (software engineering to discuss and compare dif) 116.37 321.3 P
+2.15 (ferent approaches by referring to the) 322.39 321.3 P
+1.53 (resulting code. W) 116.37 310.3 P
+1.53 (ithout code, there is the danger of discussing only abstract ideas and) 189.86 310.3 P
+-0.18 (glossing over important details. The program being short actually has a deeper implication:) 116.37 299.3 P
+0.46 (it shows that we have met our goal of changing our paradigm from line-by-line program-) 116.37 288.3 P
+(ming to component programming.) 116.37 277.3 T
+0.43 (Second, the solution is modular) 116.37 260.3 P
+0.43 (, based on the kinds of components available in STL. The) 244.09 260.3 P
+1.8 (most far) 116.37 249.3 P
+1.8 (-reaching contribution of STL is its identi\336cation of the kinds of components) 151.03 249.3 P
+0.56 (needed for software construction. W) 116.37 238.3 P
+0.56 (e have decomposed the KWIC problem into contain-) 263.62 238.3 P
+0.38 (ers, algorithms, iterators, and function objects. W) 116.37 227.3 P
+0.38 (e found some of the needed components) 315.58 227.3 P
+0.03 (in the catalog, and others we had to build ourselves. Modularization according to this clas-) 116.37 216.3 P
+(si\336cation of components seems natural and general.) 116.37 205.3 T
+1.46 (Third, to reach the complete goal of component programming, there would have to be) 116.37 188.3 P
+1.1 (many catalogs. For example, we would need a catalog for text processing, \336le manage-) 116.37 177.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "12" 14
+%%Page: "11" 15
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(1) 471.46 125.28 T
+(1) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(3.) 124.47 664.3 T
+3 F
+(CircularShift) 134.37 664.3 T
+0 F
+(: A function object that, when applied to a title, produces all the circular) 187.16 664.3 T
+(shifts of that title.) 134.37 653.3 T
+(4.) 124.47 640.3 T
+3 F
+-0.34 (<<) 134.37 640.3 P
+0 F
+-0.34 (: Definition of an output operator for permuted lines. This operator can perform the) 147.87 640.3 P
+(necessary formatting.) 134.37 629.3 T
+-0.07 (The main program appears in Figure 3. The program) 116.37 290.57 P
+5 F
+-0.16 (includes) 329.05 290.57 P
+0 F
+-0.07 ( the relevant STL \336les. In) 377.05 290.57 P
+-0.18 (the subsequent programs, I will not show the) 116.37 279.57 P
+5 F
+-0.44 (include) 296.84 279.57 P
+0 F
+-0.18 ( statements. The complete program) 338.84 279.57 P
+0.8 (appears in the appendix in one \336le. The processing part of the program consists of three) 116.37 268.57 P
+1.63 (lines: copying from an input \336le into the titles list; shifting the list and producing the) 116.37 257.57 P
+0.56 (KWICindex; and printing the results by copying the resulting index to output. In the \336rst) 116.37 246.57 P
+2.54 (statement, we use) 116.37 235.57 P
+3 F
+2.54 (copy) 197.32 235.57 P
+0 F
+2.54 ( to read the \336le into an in-memory list. W) 216.2 235.57 P
+2.54 (e use the adapter) 404.38 235.57 P
+3 F
+0.93 (back_inserter) 116.37 224.57 P
+0 F
+0.93 ( to modify the interface to the) 171.36 224.57 P
+3 F
+0.93 (titles) 299.24 224.57 P
+0 F
+0.93 ( list so that assignments to the list will) 318.69 224.57 P
+0.56 (actually do an insert instead of the usual overwriting. This adapter allows) 116.37 213.57 P
+3 F
+0.56 (copy) 418.93 213.57 P
+0 F
+0.56 ( and other) 437.81 213.57 P
+-0.06 (algorithms to work both with tar) 116.37 202.57 P
+-0.06 (gets that have memory pre-allocated and those that do not.) 245.61 202.57 P
+0.2 (The third statement also uses) 116.37 191.57 P
+3 F
+0.2 (copy) 235.96 191.57 P
+0 F
+0.2 (, this time to produce the results onto the output stream.) 254.19 191.57 P
+0.35 (Here, we use) 116.37 180.57 P
+3 F
+0.35 (ostr) 171.84 180.57 P
+0.35 (eam_iterator) 187.03 180.57 P
+0 F
+0.35 ( adapter to get an output iterator that writes onto the output) 239.25 180.57 P
+116.37 170.94 478.92 670.97 C
+116.37 304.24 478.92 625.97 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+134.66 314.16 460.64 621.01 R
+7 X
+0 0 0 1 0 0 0 K
+V
+2 9 Q
+0 X
+(#include <iostream.h>) 134.66 615.01 T
+(#include <pair) 134.66 604.01 T
+(.h>) 190.44 604.01 T
+(#include <list.h>) 134.66 593.01 T
+(#include <multimap.h>) 134.66 582.01 T
+(#include <algo.h>) 134.66 571.01 T
+(#include <vector) 134.66 560.01 T
+(.h>) 199.94 560.01 T
+(typedef vector<char> string;) 134.66 538.01 T
+(typedef multimap<string, string *, less<string> > permutedT) 134.66 527.01 T
+(itles_t;) 370.42 527.01 T
+(typedef list<string> T) 134.66 516.01 T
+(itles_t;) 217.86 516.01 T
+(typedef pair<const string, string *> T) 134.66 505.01 T
+(itlesPair_t;) 278.89 505.01 T
+(int main \050int argc, char *argv[]\051 {) 134.66 483.01 T
+(    T) 134.66 472.01 T
+(itles_t titles;) 149.83 472.01 T
+(    permutedT) 134.66 461.01 T
+(itles_t KWICindex;) 187.85 461.01 T
+(    copy\050istream_iterator<string, ptrdif) 134.66 439.01 T
+(f_t>\050cin\051, istream_iterator<string, ptrdif) 281.29 439.01 T
+(f_t>\050\051,) 433.68 439.01 T
+( back_inserter\050titles\051\051;) 152.66 428.01 T
+(    for_each\050titles.begin\050\051, titles.end\050\051, CircularShift\050KWICindex\051\051;) 134.66 406.01 T
+(    copy\050KWICindex.begin\050\051, KWICindex.end\050\051,) 134.66 384.01 T
+( ostream_iterator<titlesPair_t>\050cout\051\051;) 152.66 373.01 T
+(    return 0;) 134.66 351.01 T
+(}) 134.66 340.01 T
+4 F
+(Fig. 3.) 134.66 318.01 T
+0 F
+(Main program for KWIC index program) 160.66 318.01 T
+116.37 170.94 478.92 670.97 C
+-8.35 24.95 603.65 816.95 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "11" 15
+%%Page: "10" 16
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(10) 471.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 9 Q
+(merge \050f1, l1, f2, l2, f3\051;) 134.37 513.32 T
+3 10 Q
+1.63 (f1, l1, f2, l2) 116.37 495.65 P
+0 F
+1.63 (, and) 167.38 495.65 P
+3 F
+1.63 (f3) 192.57 495.65 P
+0 F
+1.63 ( are iterators into any combination of STL-de\336ned or user) 200.35 495.65 P
+1.63 (-de\336ned) 446.15 495.65 P
+-0.09 (sequences, including input or output streams. The same) 116.37 484.65 P
+3 F
+-0.09 (mer) 340.05 484.65 P
+-0.09 (ge) 355.23 484.65 P
+0 F
+-0.09 ( component will work for all) 364.67 484.65 P
+0.01 (combinations.) 116.37 473.65 P
+3 F
+0.01 (Mer) 175.27 473.65 P
+0.01 (ge) 191.56 473.65 P
+0 F
+0.01 ( requires that the elements in the containers being mer) 201 473.65 P
+0.01 (ged are compa-) 417.26 473.65 P
+(rable.) 116.37 462.65 T
+4 12 Q
+(3.3 Software design with STL: a KWIC example) 116.37 440.32 T
+0 10 Q
+0.75 (T) 116.37 423.65 P
+0.75 (o demonstrate component-oriented software design and decomposition, in this section I) 121.78 423.65 P
+0.08 (give a component-based solution to a problem that has been used as a standard example in) 116.37 411.65 P
+0.31 (the software literature. In 1972, Parnas [10) 116.37 399.5 P
+2 F
+0.34 (]) 289.3 399.5 P
+0 F
+0.31 ( showed a novel decomposition and modulari-) 292.08 399.5 P
+-0.18 (zation technique called information hiding. He demonstrated the bene\336ts of the new modu-) 116.37 387.5 P
+2.1 (larization technique over traditional procedural modularizations with an example of a) 116.37 375.5 P
+1.7 (Keyword in Context program. I will show here one possible component programming) 116.37 363.5 P
+(approach to the KWIC example.) 116.37 351.5 T
+0.45 (The KWIC index generation problem is de\336ned informally as follows: The input consists) 116.37 333.5 P
+-0.18 (of an ordered set of lines; a line is an ordered set of words; a word is an ordered set of char-) 116.37 322.49 P
+0.4 (acters. Each line may be circularly shifted repeatedly by moving the \336rst word of the line) 116.37 311.49 P
+-0.16 (to the end of the line. The output is the sorted listing of all the circular shifts of all the input) 116.37 300.49 P
+(lines.) 116.37 289.49 T
+(W) 116.37 272.49 T
+(e can solve this problem using the following components:) 125.01 272.49 T
+(1.) 124.47 259.49 T
+3 F
+(titles) 136.87 259.49 T
+0 F
+(: a container that holds the input lines\321this is a simple linear list of titles.) 156.32 259.49 T
+(2.) 124.47 246.49 T
+3 F
+(KWICindex) 134.37 246.49 T
+0 F
+(: a container that contains the sorted list of permuted indexes. For this) 181.03 246.49 T
+(container, we will use a multimap of pairs of strings. The first element of a pair is the) 134.37 235.49 T
+-0.42 (permuted title and the second is a pointer into the titles list, pointing to the original title) 134.37 224.49 P
+-0.39 (whose permutation is the first element of the pair. A multimap is an STL container that) 134.37 213.49 P
+(keeps its elements sorted. At the time the multimap is created \050instantiated\051, we must) 134.37 202.49 T
+(supply a comparison operator for ordering the container elements.) 134.37 191.49 T
+116.37 170.94 478.92 670.97 C
+116.37 519.32 478.92 670.97 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+132.07 529.24 463.23 669.05 R
+7 X
+0 0 0 1 0 0 0 K
+V
+2 9 Q
+0 X
+(template <class InputIterator1, class InputIterator2, class OutputIterator>) 132.07 663.05 T
+(OutputIterator merge\050InputIterator1 \336rst1, InputIterator1 last1,) 132.07 652.05 T
+(     InputIterator2 \336rst2, InputIterator2 last2,) 204.07 641.05 T
+(     OutputIterator result\051 {) 204.07 630.05 T
+(    while \050\336rst1 != last1 && \336rst2 != last2\051) 132.07 619.05 T
+(if \050*\336rst2 < *\336rst1\051) 185.1 608.05 T
+(*result++ = *\336rst2++;) 204.07 597.05 T
+(else) 186.07 586.05 T
+( *result++ = *\336rst1++;) 204.07 575.05 T
+(    return copy\050\336rst2, last2, copy\050\336rst1, last1, result\051\051;) 132.07 564.05 T
+(}) 132.07 553.05 T
+4 F
+(Fig. 2.) 132.07 531.05 T
+0 F
+(The Mer) 158.07 531.05 T
+(ge component from STL) 189.15 531.05 T
+116.37 170.94 478.92 670.97 C
+-8.35 24.95 603.65 816.95 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "10" 16
+%%Page: "9" 17
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(9) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(W) 116.37 664.3 T
+(e can check for some value, say 5, in the array:) 125.01 664.3 T
+2 9 Q
+(f = \336nd\050&a[0]) 134.37 653.97 T
+6 F
+(\237\206\237) 185.65 653.97 T
+2 F
+(, &a[100], 5\051;) 185.65 653.97 T
+(if \050f == &a[100]\051 //not found...) 134.37 642.97 T
+0 10 Q
+(Or we can look only through part of the array:) 116.37 625.3 T
+2 9 Q
+(f = \336nd\050&a[2], &a[50]) 134.37 614.97 T
+6 F
+(\237\206\237) 216.68 614.97 T
+2 F
+(, 5\051;) 216.68 614.97 T
+0 10 Q
+0.01 (But) 116.37 597.3 P
+3 F
+0.01 (\336nd) 133.34 597.3 P
+0 F
+0.01 ( is generic. If we have written a list container) 148.34 597.3 P
+0.01 (, or use the one from STL, containing) 328.57 597.3 P
+0.61 (elements of a previously-de\336ned) 116.37 586.3 P
+3 F
+0.61 (student_t) 252.11 586.3 P
+0 F
+0.61 ( type, we can look for a particular student, say) 288.78 586.3 P
+3 F
+(geor) 116.37 575.3 T
+(g) 134.33 575.3 T
+0 F
+(:) 139.33 575.3 T
+2 9 Q
+(list<student_t> students;) 134.37 564.97 T
+(...insertion into students...) 134.37 553.97 T
+(f = \336nd\050students.begin\050\051, students.end\050\051, georg\051;) 134.37 542.97 T
+0 10 Q
+1.52 (Each container is required to provide the two iterators) 116.37 525.3 P
+3 F
+1.52 (begin) 348.11 525.3 P
+0 F
+1.52 ( and) 370.33 525.3 P
+3 F
+1.52 (end) 392.82 525.3 P
+0 F
+1.52 ( that point to the) 407.26 525.3 P
+(beginning and one position beyond the end of the container) 116.37 514.3 T
+(.) 353.29 514.3 T
+0.98 (W) 116.37 497.3 P
+0.98 (e can also use) 125.01 497.3 P
+3 F
+0.98 (\336nd) 186.68 497.3 P
+0 F
+0.98 ( to search a list being read from an input device. But \336rst we must) 201.68 497.3 P
+-0.06 (attach an iterator to an input stream. STL provides an) 116.37 486.3 P
+2 F
+-0.06 (istream_iterator) 331.59 486.3 P
+0 F
+-0.06 ( component for this) 401.05 486.3 P
+(purpose. The code requires that an input operation for the student type is de\336ned.) 116.37 475.3 T
+2 9 Q
+(f = \336nd\050istream_iterator<student_t>\050cin\051, istream_iterator<student_t>\050\051, georg\051;) 134.37 464.97 T
+0 10 Q
+0.61 (The) 116.37 447.3 P
+3 F
+0.61 (istr) 135.03 447.3 P
+0.61 (eam_iterator) 148 447.3 P
+0 F
+0.61 ( constructs an iterator that works on an input stream. This allows all) 200.22 447.3 P
+-0.11 (the algorithms to work with input streams. Input iterators are limited to providing access to) 116.37 436.3 P
+0.47 (successive elements of the stream. An) 116.37 425.3 P
+3 F
+0.47 (istr) 273.9 425.3 P
+0.47 (eam_iterator) 286.87 425.3 P
+0 F
+0.47 ( without a parameter constructs an) 339.09 425.3 P
+1.15 (end-of-stream iterator object. Each ++ on an input iterator reads a value from the input) 116.37 414.3 P
+0.25 (stream for which it was constructed and stores the value. Every dereference of the iterator) 116.37 403.3 P
+0.05 (returns the value stored, as a constant value. No other operations are allowed on input iter-) 116.37 392.3 P
+(ators.) 116.37 381.3 T
+0.75 (W) 116.37 364.3 P
+0.75 (e can see the versatility of STL components from the) 125.01 364.3 P
+3 F
+0.75 (mer) 346.96 364.3 P
+0.75 (ge) 362.14 364.3 P
+0 F
+0.75 ( component which mer) 371.58 364.3 P
+0.75 (ges) 465.59 364.3 P
+-0.03 (two ordered input sequences into an ordered output sequence. Because it relies on an itera-) 116.37 353.3 P
+0.74 (tor interface, the same component is able to operate with any combination of containers.) 116.37 342.3 P
+0.02 (For example, we may mer) 116.37 331.3 P
+0.02 (ge a vector and a sequence read from input into an output list, or) 220.96 331.3 P
+(we may mer) 116.37 320.3 T
+(ge two lists and produce the result on an output stream.) 165.62 320.3 T
+0.47 (The code for mer) 116.37 303.3 P
+0.47 (ge is shown in Figure 2. Again, we see that the two input sequences are) 186.76 303.3 P
+-0.19 (represented by two iterators and the output sequence is represented by a single iterator) 116.37 292.3 P
+-0.19 (. The) 458.56 292.3 P
+0.41 (code is compact and simple. It uses another STL component,) 116.37 281.3 P
+3 F
+0.41 (copy) 366.57 281.3 P
+0 F
+0.41 (, to copy the remainder) 384.8 281.3 P
+0.32 (of one of the sequences into the output after the other input sequence has been exhausted.) 116.37 270.3 P
+-0.22 (Because) 116.37 259.3 P
+3 F
+-0.22 (copy) 151.97 259.3 P
+0 F
+-0.22 ( returns a pointer beyond its resulting output sequence,) 170.85 259.3 P
+3 F
+-0.22 (copy) 390.46 259.3 P
+0 F
+-0.22 ( can be combined) 409.34 259.3 P
+0.69 (easily with other components such as itself. W) 116.37 248.3 P
+0.69 (e see an example of this in the last line of) 306.49 248.3 P
+3 F
+0.57 (mer) 116.37 237.3 P
+0.57 (ge) 131.55 237.3 P
+0 F
+0.57 (. Indeed, many STL components are built from other STL components, reinforcing) 140.99 237.3 P
+(the usability and ef) 116.37 226.3 T
+(\336ciency requirements of STL components.) 192.57 226.3 T
+-0.07 (Here is a \336nal example of the power of component composition. These statements sort two) 116.37 209.3 P
+(sequence and mer) 116.37 198.3 T
+(ge the results onto a third sequence:) 187.83 198.3 T
+2 9 Q
+(sort \050f1, l1\051;) 134.37 187.97 T
+(sort \050f2, l2\051;) 134.37 176.97 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "9" 17
+%%Page: "8" 18
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(8) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.62 (Figure 1 shows the code for the) 116.37 562.26 P
+3 F
+0.62 (\336nd) 249.27 562.26 P
+0 F
+0.62 ( component in STL. This component is an algorithm) 264.27 562.26 P
+0.36 (that searches a sequence linearly for a desired value. It is a good example of how compo-) 116.37 551.26 P
+0 (nents can be written that are generic, powerful, and ef) 116.37 540.26 P
+0 (\336cient. The code is simple: the range) 331.43 540.26 P
+0.3 (is represented by) 116.37 529.26 P
+3 F
+0.3 (\336rst) 187.54 529.26 P
+0 F
+0.3 ( and) 203.1 529.26 P
+3 F
+0.3 (last) 223.15 529.26 P
+0 F
+0.3 ( \050) 237.6 529.26 P
+3 F
+0.3 (\336rst) 243.74 529.26 P
+0 F
+0.3 ( and) 259.3 529.26 P
+3 F
+0.3 (last) 279.35 529.26 P
+0 F
+0.3 ( are passed by value\321they are local variables) 293.8 529.26 P
+-0.17 (in) 116.37 518.26 P
+3 F
+-0.17 (\336nd) 126.48 518.26 P
+0 F
+-0.17 ( and are initialized from the parameter values\051;) 141.48 518.26 P
+3 F
+-0.17 (\336rst) 330.07 518.26 P
+0 F
+-0.17 ( is repeatedly incremented until it) 345.63 518.26 P
+1.07 (is either equal to) 116.37 507.26 P
+3 F
+1.07 (last) 189.52 507.26 P
+0 F
+1.07 (, or it points to something equal to) 203.98 507.26 P
+3 F
+1.07 (value) 352.25 507.26 P
+0 F
+1.07 (. Finally) 373.91 507.26 P
+1.07 (,) 407.67 507.26 P
+3 F
+1.07 (\336rst) 413.74 507.26 P
+0 F
+1.07 ( is returned,) 429.3 507.26 P
+0.76 (either pointing to the desired value or equal to) 116.37 496.26 P
+3 F
+0.76 (last) 310.18 496.26 P
+0 F
+0.76 (. The following principles are used to) 324.63 496.26 P
+(enable so few lines to accomplish so much:) 116.37 485.26 T
+(1.) 124.47 472.26 T
+-0.38 (C++ templates are used to make the component generic with respect to the data type of) 134.37 472.26 P
+(the element being sought. This kind of genericity is now common in C++ template) 134.37 461.26 T
+(libraries. In this example, the class T captures the requirements on the) 134.37 450.26 T
+3 F
+(value) 416.54 450.26 T
+0 F
+( we are) 438.2 450.26 T
+(looking for: it may be a built-in or user-defined type and we need only read access to) 134.37 439.26 T
+(it. Perhaps most surprising is the absence of any specific type declarations in this) 134.37 428.26 T
+(algorithm. The two template parameters,) 134.37 417.26 T
+3 F
+(InputIterator) 299.62 417.26 T
+0 F
+( and) 351.84 417.26 T
+3 F
+(T) 371.28 417.26 T
+0 F
+(, are declared to be class) 376.84 417.26 T
+(parameters. All this says is that they are types\321either built-in or user-defined types.) 134.37 406.26 T
+(The requirements on these types are deduced by the compiler based on the operations) 134.37 395.26 T
+(in the algorithm.) 134.37 384.26 T
+(2.) 124.47 371.26 T
+(The range interface, consisting of two iterators, is used to achieve genericity with) 134.37 371.26 T
+(respect to the structure of the container being searched. Without indicating what an) 134.37 360.26 T
+-0.56 (iterator is, or what container we are searching, we are able to state that we are searching) 134.37 349.26 P
+(for something in a collection of things, sequentially, until the range is exhausted. It is) 134.37 338.26 T
+(the responsibility of the iterators to know how to step through the container. By) 134.37 327.26 T
+(distributing the responsibility this way, we have made it possible for the algorithm to) 134.37 316.26 T
+-0.68 (state only the essence of linear search through a sequence. It is hard to imagine how) 134.37 305.26 P
+3 F
+-0.68 (find) 461.54 305.26 P
+0 F
+(can be written in less code.) 134.37 294.26 T
+(3.) 124.47 281.26 T
+-0.06 (By convention, the class of iterators required for specifying the range is stated here as) 134.37 281.26 P
+(InputIterator, which is the least restrictive category of iterator. This means that the) 134.37 270.26 T
+-0.38 (sequence may even be read from an input device. All that is required of the iterator can) 134.37 259.26 P
+(be seen in the code: comparison, dereference, and increment. To guarantee the) 134.37 248.26 T
+-0.45 (complexity of the algorithm, it is also required that these three operations take constant) 134.37 237.26 P
+(time.) 134.37 226.26 T
+(4.) 124.47 213.26 T
+-0.37 (Because the code is a template, it will be compiled together with the user program, and) 134.37 213.26 P
+(may be expanded in-line, avoiding the overhead of a procedure call.) 134.37 202.26 T
+(Let us say we have de\336ned an array of integers in our program:) 116.37 185.26 T
+2 9 Q
+(int a[100]) 134.37 174.93 T
+6 F
+(\237\206\237) 171.4 174.93 T
+2 F
+(;) 171.4 174.93 T
+116.37 170.94 478.92 670.97 C
+116.37 575.93 478.92 660.97 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+141.64 582.34 453.66 654.55 R
+7 X
+0 0 0 1 0 0 0 K
+V
+2 9 Q
+0 X
+(template <class InputIterator) 141.64 648.55 T
+(, class T>) 254.95 648.55 T
+(InputIterator \336nd\050InputIterator \336rst, InputIterator last,  const T& value\051 {) 141.64 637.55 T
+(    while \050\336rst != last && *\336rst != value\051 \336rst++;) 141.64 626.55 T
+(    return \336rst;) 141.64 615.55 T
+(}) 141.64 604.55 T
+4 F
+(Fig. 1.) 141.64 582.55 T
+0 F
+(The \336nd component from STL) 167.64 582.55 T
+116.37 170.94 478.92 670.97 C
+-8.35 24.95 603.65 816.95 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "8" 18
+%%Page: "7" 19
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(7) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.54 (The notion of an iterator is the most important building block of STL. A forward iterator) 116.37 664.3 P
+-0.09 (supports the two operations of dereferencing \050* in C++\051 and step \050++ in C++\051, each in con-) 116.37 653.3 P
+0.15 (stant time. Thus, a C pointer may be used as an iterator \050of an array\051. This way) 116.37 642.3 P
+0.15 (, STL algo-) 432.79 642.3 P
+0.43 (rithms will work on C++ built-in pointers as well as on user) 116.37 631.3 P
+0.43 (-de\336ned iterators, such as the) 360.27 631.3 P
+-0.1 (STL-de\336ned iterators for list containers. T) 116.37 620.3 P
+-0.1 (reating built-in and user) 284.93 620.3 P
+-0.1 (-de\336ned types uniformly) 380.25 620.3 P
+-0.24 (is a key design principle of STL. It implies that STL algorithms may be used with user con-) 116.37 609.3 P
+0.29 (tainers, and STL containers may be used with user algorithms. More importantly) 116.37 598.3 P
+0.29 (, the user) 441.96 598.3 P
+(does not have to sacri\336ce ef) 116.37 587.3 T
+(\336ciency to use the STL components.) 227.55 587.3 T
+0.25 (A pair of iterators is used to represent a range of elements in a container) 116.37 570.3 P
+0.25 (. Most algorithms) 407.58 570.3 P
+0.9 (use this representation for a sequence. By convention, the \336rst iterator points to the \336rst) 116.37 559.3 P
+-0.01 (element in the range and the second iterator points to one element beyond the last element.) 116.37 548.3 P
+1.25 (In C++, this address is always guaranteed to be de\336ned. This representation of a range) 116.37 537.3 P
+1.63 (allows easy representation for an empty range\321two iterators are equal\321and a natural) 116.37 526.3 P
+1.7 (structure for algorithms\321loop as long as the \336rst iterator has not reached the second.) 116.37 515.3 P
+0.69 (T) 116.37 504.3 P
+0.69 (ogether with a taxonomy of iterators, this representation is the basis for the interface to) 121.78 504.3 P
+1.5 (sequences. Such a \322published\323 interface enables others to produce other algorithm and) 116.37 493.3 P
+(container components.) 116.37 482.3 T
+-0.2 (An adapter is used to coerce a component into providing a dif) 116.37 465.3 P
+-0.2 (ferent interface. For example,) 360.94 465.3 P
+0.66 (instead of implementing stacks and queues as new containers, stack and queue templates) 116.37 454.3 P
+0.1 (are provided that adapt the interface of other containers such as STL vectors and lists. The) 116.37 443.3 P
+0.72 (requirements that state which containers are convertible are given precisely\321in terms of) 116.37 432.3 P
+0.29 (supported iterators\321and are checked at compile-time. Using adapters reduces the amount) 116.37 421.3 P
+0.53 (of code that needs to be written for the library and is a useful technique for the program-) 116.37 410.3 P
+0.44 (mer) 116.37 399.3 P
+0.44 (. It is a way to avoid overcrowding a component catalog with many dif) 131.37 399.3 P
+0.44 (ferent types of) 420.27 399.3 P
+-0.05 (components that are similar and are derivable from each other) 116.37 388.3 P
+-0.05 (. It is also a design technique) 363.39 388.3 P
+-0.19 (for the programmer to reduce the number of lines to be written and maintained. Proper iter-) 116.37 377.3 P
+0.7 (ators do not introduce runtime overhead because the \322adaption\323 is done at compile-time.) 116.37 366.3 P
+2.1 (Adapters may be used for components other than containers as well. For example, a) 116.37 355.3 P
+0.27 (reverse iterator may be manufactured out of a bidirectional iterator to allow a container to) 116.37 344.3 P
+(be traversed in reverse order) 116.37 333.3 T
+(.) 229.66 333.3 T
+4 12 Q
+(3.2 Generic examples) 116.37 310.97 T
+0 10 Q
+-0.13 (In this section, I use some small examples to show the generality and versatility of the STL) 116.37 294.3 P
+-0.22 (components. In the next subsection, I will give a solution to the standard KWIC example in) 116.37 282.3 P
+(STL to allow comparison with other approaches.) 116.37 270.3 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "7" 19
+%%Page: "6" 20
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(6) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2.37 (log is not comprehensive, the programmer will not \336nd the needed components and) 116.37 664.3 P
+-0.22 (therefore will stop using it. If there are not enough catalogs to cover most of an application,) 116.37 653.3 P
+1.02 (then using catalogs will not become a routine activity because line-by-line development) 116.37 642.3 P
+(will still be required.) 116.37 631.3 T
+1.24 (Thus, as is usual in any design, the design of catalogs requires a trade-of) 116.37 614.3 P
+1.24 (f between not) 422.01 614.3 P
+0.51 (including enough and including too much. The tradeof) 116.37 603.3 P
+0.51 (f must be resolved by appealing to) 338.09 603.3 P
+(the concept taxonomy) 116.37 592.3 T
+(.) 204.04 592.3 T
+4 14 Q
+(3  STL: A model component catalog) 116.37 562.63 T
+0 10 Q
+1.07 (The Standard T) 116.37 541.3 P
+1.07 (emplate Library is a library of templates adopted recently by ANSI as a) 180.02 541.3 P
+0.51 (standard for C++. It meets all the requirements stated in the previous section. In this sec-) 116.37 529.3 P
+0.55 (tion, I examine the key characteristics of this library) 116.37 517.3 P
+0.55 (, and discuss the unique features that) 328.7 517.3 P
+(make it promising as a foundation for component-based software engineering.) 116.37 505.3 T
+4 12 Q
+(3.1 Kinds of components) 116.37 481.97 T
+0 10 Q
+0.2 (STL contains \336ve kinds of components: algorithms, containers, iterators, function objects,) 116.37 465.3 P
+1.03 (and adaptors. Algorithms and containers provide many of the usual algorithms and data) 116.37 453.3 P
+2.38 (structures. Iterators provide dif) 116.37 441.3 P
+2.38 (ferent ways of traversing through containers. Function) 247.19 441.3 P
+0.58 (objects are a mechanism for packaging a function so that it can be used by other compo-) 116.37 429.3 P
+0.79 (nents. Adaptors are mechanisms for modifying the interface of a component. T) 116.37 417.3 P
+0.79 (o achieve) 440.1 417.3 P
+-0.01 (maximum genericity) 116.37 405.3 P
+-0.01 (, the library separates algorithms and data structures and uses iterators) 198.77 405.3 P
+1.07 (as an intermediary) 116.37 393.3 P
+1.07 (. This interesting modularization allows the algorithms to encapsulate) 191.74 393.3 P
+1.65 (computational procedures, the containers to encapsulate memory management policies,) 116.37 381.3 P
+3.15 (and the iterators to encapsulate container traversal policies. Thus, algorithms make) 116.37 369.3 P
+0.56 (assumptions about the capabilities of iterators, for example, whether an iterator is able to) 116.37 357.3 P
+0.45 (move forward or backward through a container; algorithms make no assumptions about a) 116.37 345.3 P
+0.32 (container) 116.37 333.3 P
+0.32 (\325) 153.95 333.3 P
+0.32 (s memory or) 156.73 333.3 P
+0.32 (ganization. All containers that support a forward iterator are opera-) 207.75 333.3 P
+0.14 (ble by an algorithm that requires a forward iterator) 116.37 321.3 P
+0.14 (. Iterators can be thought of as abstract-) 319.66 321.3 P
+2.53 (ing the generic properties of containers of interest to certain algorithms. In general,) 116.37 309.3 P
+0.05 (containers are classi\336ed by the type of iterators they are able to support and algorithms are) 116.37 297.3 P
+0.8 (classi\336ed by the type of iterators they require. Bidirectional iterators support traversal in) 116.37 285.3 P
+-0.13 (both directions and random access iterators support access to an arbitrary element in a con-) 116.37 273.3 P
+0.75 (tainer in constant time. Thus, if an algorithm requires a random access iterator) 116.37 261.3 P
+0.75 (, it cannot) 437.7 261.3 P
+1.31 (work on a standard list. Obviously) 116.37 249.3 P
+1.31 (, it is possible to write a routine to simulate random) 260.03 249.3 P
+0.58 (access to arbitrary elements of a list by repeatedly stepping through the list. But this will) 116.37 237.3 P
+1.21 (violate the complexity assumptions required by the algorithms. T) 116.37 225.3 P
+1.21 (wo other more limited) 386.14 225.3 P
+1.1 (iterators, input iterators and output iterators, are used to include input and output in the) 116.37 213.3 P
+0.05 (same framework. These iterators extend the applicability of algorithms to input and output) 116.37 201.3 P
+(\336les and devices.) 116.37 189.3 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "6" 20
+%%Page: "5" 21
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(5) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1.28 (time for unsorted sequences, which is the best one can do. In turn, the) 116.37 664.3 P
+3 F
+1.28 (\336nd) 415.7 664.3 P
+0 F
+1.28 ( component) 430.7 664.3 P
+0.78 (makes an assumption about the data structure on which it works: that stepping from one) 116.37 653.3 P
+0.61 (element of the sequence to the next takes a \336xed cost. This requirement is met by all the) 116.37 642.3 P
+0.87 (data structures provided by STL. But it is a requirement on the users as well: if you are) 116.37 631.3 P
+0.25 (going to build your own data structure, then you are required to provide a \336xed-cost next-) 116.37 620.3 P
+-0.15 (element operator) 116.37 609.3 P
+-0.15 (. Such a set of requirements\321) 183.15 609.3 P
+3 F
+-0.15 (laws) 303.48 609.3 P
+0 F
+-0.15 (\321are necessary for a component-based) 321.82 609.3 P
+0.38 (paradigm. If we are to rely on components as the primary means to building applications,) 116.37 598.3 P
+-0.18 (the semantics of a component must include not only its functional behavior but also its per-) 116.37 587.3 P
+2.37 (formance. For example, Common Lisp, which originated many of the early ideas in) 116.37 576.3 P
+0.13 (generic programming, has a generic function) 116.37 565.3 P
+3 F
+0.13 (elt sequence index) 299.04 565.3 P
+0 F
+0.13 (, which returns an element) 372.6 565.3 P
+1.03 (in position) 116.37 554.3 P
+3 F
+1.03 (index) 163.45 554.3 P
+0 F
+1.03 ( in) 185.1 554.3 P
+3 F
+1.03 (sequence) 199.95 554.3 P
+0 F
+1.03 (. The sequence may be either a vector or a list. While this) 236.6 554.3 P
+-0.17 (generic function makes it easier from the programming point of view to write generic algo-) 116.37 543.3 P
+-0.2 (rithms that work on both arrays and lists, it can be disastrous in terms of runtime ef) 116.37 532.3 P
+-0.2 (\336ciency) 445.41 532.3 P
+-0.2 (,) 476.42 532.3 P
+-0.15 (because) 116.37 521.3 P
+3 F
+-0.15 (elt) 150.37 521.3 P
+0 F
+-0.15 ( will take linear time for lists. A sort routine written with the help of) 160.37 521.3 P
+3 F
+-0.15 (elt) 433.12 521.3 P
+0 F
+-0.15 ( will cer-) 443.12 521.3 P
+0.1 (tainly work correctly for both arrays and lists, but it will run much slower for lists. In gen-) 116.37 510.3 P
+0.22 (eral, we may replace one component with another only if it has the same interface and the) 116.37 499.3 P
+(same performance characteristics.) 116.37 488.3 T
+0.32 (The ef) 116.37 471.3 P
+0.32 (\336ciency requirement is quite serious, even if not academically popular: much ef) 142.33 471.3 P
+0.32 (fort) 464.48 471.3 P
+0.35 (in software development is involved with \336nding faster ways of providing the same func-) 116.37 460.3 P
+-0.21 (tionality) 116.37 449.3 P
+-0.21 (. Indeed, delivering a given functionality is not usually dif) 149.06 449.3 P
+-0.21 (\336cult. The delay in many) 379.49 449.3 P
+1.79 (projects is due to trying to deliver the functionality at acceptable performance. Often,) 116.37 438.3 P
+0.65 (delivery of a software product is delayed while special performance teams solve the per-) 116.37 427.3 P
+0.89 (formance \322problems.\323 It is during this performance improvement phase of a project that) 116.37 416.3 P
+0.01 (many of the other software goals such as maintainability are compromised. The overriding) 116.37 405.3 P
+0.14 (concern in this phase is performance and nothing is ruled out, not even rewriting pieces of) 116.37 394.3 P
+0.1 (code in assembly language. Unless standard components are as ef) 116.37 383.3 P
+0.1 (\336cient as possible\321both) 379.83 383.3 P
+0.89 (at the algorithm level and at the coding level\321they will be discarded when it is time to) 116.37 372.3 P
+(address the performance problems.) 116.37 361.3 T
+0.93 (STL components not only provide a uniform interface for both built-in and user) 116.37 344.3 P
+0.93 (-de\336ned) 446.15 344.3 P
+0.5 (structures, they guarantee that if the components are used with built-in types, they do not) 116.37 333.3 P
+-0.13 (incur any execution overhead, such as extra procedure calls or indirect references. This is a) 116.37 322.3 P
+(problem in many existing libraries.) 116.37 311.3 T
+2.32 (W) 116.37 294.3 P
+2.32 (riting generic components is hard but writing) 125.41 294.3 P
+3 F
+2.32 (ef\336cient) 324.68 294.3 P
+0 F
+2.32 ( generic components is even) 356.34 294.3 P
+1.76 (harder! Component production is a specialized activity) 116.37 283.3 P
+1.76 (. It requires special concern for) 345.71 283.3 P
+0.98 (abstraction and generalization, and study of data structures and algorithms. Components) 116.37 272.3 P
+-0.01 (cannot be expected to be produced as a by-product of application development. In fact, the) 116.37 261.3 P
+1.33 (dif) 116.37 250.3 P
+1.33 (ferences between component development and application development appear to be) 127.3 250.3 P
+(similar to the dif) 116.37 239.3 T
+(ferences between chip design and circuit design.) 182.58 239.3 T
+4 F
+(Catalogs must be compr) 116.37 216.3 T
+(ehensive.) 219.79 216.3 T
+0 F
+0.68 (Our \336rst requirement was that a catalog must cover a) 260.9 216.3 P
+0.11 (taxonomy of concepts in a given domain. For the use of components to become pervasive,) 116.37 205.3 P
+0.07 (not only each catalog must be comprehensive, but there must be many comprehensive cat-) 116.37 194.3 P
+0.38 (alogs. It must be worthwhile for the programmer to study a particular catalog. If the cata-) 116.37 183.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "5" 21
+%%Page: "4" 22
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(4) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(tions and procedures.) 116.37 664.3 T
+0.03 (But the notion of genericity can be pushed much further: algorithms can be written generi-) 116.37 647.3 P
+0.2 (cally to make minimal assumptions about the structures on which they operate. For exam-) 116.37 636.3 P
+-0.15 (ple, the component) 116.37 625.3 P
+3 F
+-0.15 (\336nd) 194.81 625.3 P
+0 F
+-0.15 ( in the STL library searches for an element in a sequence. The same) 209.81 625.3 P
+0.75 (component can be used to search arrays or dif) 116.37 614.3 P
+0.75 (ferent kinds of lists. As long as the imple-) 305.45 614.3 P
+0.2 (mentation of the sequence provides a way to step from one element of the sequence to the) 116.37 603.3 P
+-0.2 (next, and to examine each element, we can use the component) 116.37 592.3 P
+3 F
+-0.2 (\336nd) 365.49 592.3 P
+0 F
+-0.2 (. I will examine how this) 380.49 592.3 P
+0.35 (is done in the next section. The point here is that components must be made as generic as) 116.37 581.3 P
+-0.19 (possible to make them as universally usable as possible. And genericity may be applied not) 116.37 570.3 P
+(only to data structures but also to algorithms and, in general, to any component type.) 116.37 559.3 T
+0.61 (W) 116.37 542.3 P
+0.61 (riting generic components is not straightforward. Each generic component captures the) 125.41 542.3 P
+0.58 (essential properties of a lar) 116.37 531.3 P
+0.58 (ge number of speci\336c contexts in which it is used. Identifying) 226.24 531.3 P
+1.14 (the contexts from which a generalization can be made, and inventing a mechanism that) 116.37 520.3 P
+-0.06 (may be used in all those contexts requires a taxonomy of concepts and careful interfaces to) 116.37 509.3 P
+1.12 (those concepts. The concepts point out a proper modularization of the software compo-) 116.37 498.3 P
+0.34 (nents. The STL sequence algorithms, including) 116.37 487.3 P
+3 F
+0.34 (\336nd) 310.04 487.3 P
+0 F
+0.34 (, use the concept of an) 325.04 487.3 P
+3 F
+0.34 (iterator) 418.99 487.3 P
+0 F
+0.34 (, which) 449.15 487.3 P
+0.55 (is a generalization of the familiar) 116.37 476.3 P
+3 F
+0.55 (pointer) 254.61 476.3 P
+0 F
+0.55 (. An iterator is used to traverse and examine the) 282.95 476.3 P
+1.06 (contents of a data structure. Algorithms take iterators as parameters. This way) 116.37 465.3 P
+1.06 (, an algo-) 439.3 465.3 P
+0.39 (rithm can be more generic because it does not depend on the structure of a data structure.) 116.37 454.3 P
+0.97 (The algorithm\325) 116.37 443.3 P
+0.97 (s assumptions about the data structure are captured by the iterator) 177.06 443.3 P
+0.97 (, which) 448.52 443.3 P
+1.57 (provides the means for accessing the elements of the data structure. An algorithm can) 116.37 432.3 P
+0.69 (therefore apply to a family of data structures that support a particular type of iterator) 116.37 421.3 P
+0.69 (. At) 463.23 421.3 P
+1.45 (the same time, many data structure implementations can be considered \322equivalent\323 as) 116.37 410.3 P
+(long as they support the same iterator categories.) 116.37 399.3 T
+-0.03 (STL contains a comprehensive set of algorithms for several types of sequences and associ-) 116.37 382.3 P
+0.05 (ative containers. A sequence is represented by two iterators, one that points to the \336rst ele-) 116.37 371.3 P
+1.9 (ment of the sequence and one that points to the position past the last element of the) 116.37 360.3 P
+0.03 (sequence. This is the interface used by most STL algorithms, including) 116.37 349.3 P
+3 F
+0.03 (\336nd) 403.61 349.3 P
+0 F
+0.03 (. This interface) 418.61 349.3 P
+0.49 (allows the algorithm to be independent of both the types of elements in the sequence and) 116.37 338.3 P
+(the structure of the sequence.) 116.37 327.3 T
+4 F
+(Components should be as ef\336cient as possible.) 116.37 304.3 T
+0 F
+2.5 (Genericity and ef) 314.17 304.3 P
+2.5 (\336ciency appear to be) 388.4 304.3 P
+-0.14 (contradictory requirements. It is rather easy to write generic routines if we don\325) 116.37 293.3 P
+-0.14 (t care about) 432.54 293.3 P
+0.46 (ef) 116.37 282.3 P
+0.46 (\336ciency) 123.96 282.3 P
+0.46 (. W) 154.97 282.3 P
+0.46 (e could, for example, encode the type information in each data structure and) 169.07 282.3 P
+0.47 (have each algorithm check the code and do the appropriate thing based on the type. Such) 116.37 271.3 P
+0.88 (an approach is neither maintainable nor ef) 116.37 260.3 P
+0.88 (\336cient. In practice, a programmer will not use) 289.75 260.3 P
+1.28 (standard components unless they are as ef) 116.37 249.3 P
+1.28 (\336cient as those the programmer can produce.) 291.59 249.3 P
+0.67 (Users must be able to rely on performance guarantees from standards components. T) 116.37 238.3 P
+0.67 (ypi-) 462.81 238.3 P
+0.94 (cally) 116.37 227.3 P
+0.94 (, the components will be used to build even more components. The only way to be) 135.16 227.3 P
+0.71 (able to predict the performance of these higher) 116.37 216.3 P
+0.71 (-level components is if we are guaranteed) 308.04 216.3 P
+(the performance of the used components.) 116.37 205.3 T
+0.84 (A unique feature of the STL library is that for each algorithmic component, its run-time) 116.37 188.3 P
+0.27 (costs are speci\336ed. For example, the generic) 116.37 177.3 P
+3 F
+0.27 (\336nd) 297.92 177.3 P
+0 F
+0.27 ( component is guaranteed to run in linear) 312.92 177.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "4" 22
+%%Page: "3" 23
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(3) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(bra functions.) 116.37 664.3 T
+1.21 (The components in a buf) 116.37 647.3 P
+1.21 (fered i/o or linear algebra library are related intrinsically) 220.45 647.3 P
+1.21 (. This) 454.94 647.3 P
+-0.18 (relationship is not abstract or arti\336cial in any way) 116.37 636.3 P
+-0.18 (. W) 312.59 636.3 P
+-0.18 (e do not need to relate the components) 326.05 636.3 P
+1.42 (at some meta-level, for example with an inheritance relationship, to make them under-) 116.37 625.3 P
+0.48 (standable to users. What matters is the contents of the catalog. In successful catalogs, the) 116.37 614.3 P
+0.25 (components support a related set of concepts. If these concepts are understood and valued) 116.37 603.3 P
+(by users, and the components are implemented well, the catalog will be useful to users.) 116.37 592.3 T
+-0.09 (A systematically developed set of catalogs, each supporting a related set of concepts, is the) 116.37 575.3 P
+0.39 (\336rst step towards a component-based software development paradigm. If the concepts are) 116.37 564.3 P
+0.5 (chosen right, they provide the vocabulary used by the software designer) 116.37 553.3 P
+0.5 (. In mathematical) 408.22 553.3 P
+0.42 (libraries, the concepts are well-known from mathematics, e.g. matrix computations. Buf) 116.37 542.3 P
+0.42 (f-) 472.26 542.3 P
+0.29 (ered i/o and random access i/o are examples closer to computer science. This requirement) 116.37 531.3 P
+-0.06 (shows why it is dif) 116.37 520.3 P
+-0.06 (\336cult to develop useful catalogs for arbitrary domains: we need to know) 191.53 520.3 P
+0.61 (the concepts \336rst. It shows why the so-called or) 116.37 509.3 P
+0.61 (ganization-wide reusable library attempts) 311.3 509.3 P
+-0.08 (have failed. A collection of modules randomly contributed by\321albeit well-meaning\321pro-) 116.37 498.3 P
+1.58 (grammers does not produce a catalog of tightly-related components. T) 116.37 487.3 P
+1.58 (o be useful as a) 410.95 487.3 P
+0.73 (design tool, the designer must \336nd it worthwhile to spend the time to study the concepts) 116.37 476.3 P
+0.25 (supported by the catalog. The designer must foresee opportunities for repeated uses of the) 116.37 465.3 P
+-0.05 (catalog. Otherwise, the ef) 116.37 454.3 P
+-0.05 (fort of studying the catalog is an overhead that may not be recov-) 218.5 454.3 P
+(ered.) 116.37 443.3 T
+0.44 (In short, a systematic taxonomy makes it possible for the catalog designer to decide what) 116.37 426.3 P
+-0.22 (components must be included in the catalog and it tells the catalog user whether the catalog) 116.37 415.3 P
+0.39 (may contain the components required by the user) 116.37 404.3 P
+0.39 (. W) 315.45 404.3 P
+0.39 (ithout a taxonomy) 329.87 404.3 P
+0.39 (, neither the devel-) 402.78 404.3 P
+(oper nor the user can be sure.) 116.37 393.3 T
+4 F
+(Components should be as generic as possible.) 116.37 370.3 T
+0 F
+0.57 (The basic motivation for component pro-) 311.39 370.3 P
+0.66 (gramming is to reduce the number of lines of code that we have to write, to think about,) 116.37 359.3 P
+0.29 (and to maintain for each new project or application. Fewer lines of code means more pro-) 116.37 348.3 P
+1.13 (ductivity in initial development and less ef) 116.37 337.3 P
+1.13 (fort during maintenance. The same ar) 293.51 337.3 P
+1.13 (gument) 448.92 337.3 P
+0.98 (holds for the development of component catalogs. A catalog that has fewer components) 116.37 326.3 P
+0.24 (but supports the same functionality is better than one that has more components. The goal) 116.37 315.3 P
+0.11 (of minimality is even more important in the case of standard components because they are) 116.37 304.3 P
+0.29 (used repeatedly) 116.37 293.3 P
+0.29 (. Fewer components makes it easier for users to \336nd what they need and it) 178.49 293.3 P
+-0.12 (makes it easier for component developers to devote the ef) 116.37 282.3 P
+-0.12 (fort needed to perfect the compo-) 345.93 282.3 P
+(nents.) 116.37 271.3 T
+0.12 (T) 116.37 254.3 P
+0.12 (o make it possible to have fewer components means that each component must be usable) 121.78 254.3 P
+-0.22 (in more contexts, that is, it must make minimal assumptions about the context in which it is) 116.37 243.3 P
+0.87 (used. Generic components can be used to meet this requirement. Generic data structures) 116.37 232.3 P
+2.19 (such as stacks or lists of arbitrary data types are available in various libraries. Such) 116.37 221.3 P
+0.55 (genericity allows us to write one stack component rather than n stacks, one for each sup-) 116.37 210.3 P
+-0.11 (ported type. These kinds of components may be written in languages that support a generic) 116.37 199.3 P
+0.04 (facility such as Ada, Eif) 116.37 188.3 P
+0.04 (fel, or C++. Indeed, most C++ libraries are now template libraries.) 212.71 188.3 P
+0.26 (C++ templates can be used to write not only generic data structures but also generic func-) 116.37 177.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "3" 23
+%%Page: "2" 24
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(2) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.63 (neering disciplines use standard components. W) 116.37 664.3 P
+0.63 (e must adopt a similar model in software) 311.47 664.3 P
+(engineering to enable an engineering approach in software development.) 116.37 652.3 T
+-0.09 (I use the term) 116.37 634.3 P
+3 F
+-0.09 (component pr) 173.22 634.3 P
+-0.09 (ogramming) 228.03 634.3 P
+0 F
+-0.09 ( to refer to a software development paradigm based) 274.14 634.3 P
+-0.07 (strictly on the use of standard software components. V) 116.37 623.3 P
+-0.07 (arious programming paradigms such) 332.75 623.3 P
+0.81 (as object-oriented programming and functional programming have provided partial solu-) 116.37 612.3 P
+0.59 (tions to this problem, although they neither insist on the use of) 116.37 601.3 P
+3 F
+0.59 (standar) 375.9 601.3 P
+0.59 (d) 406.09 601.3 P
+0 F
+0.59 ( components nor) 411.09 601.3 P
+0.88 (on the) 116.37 590.3 P
+3 F
+0.88 (exclusive) 145.36 590.3 P
+0 F
+0.88 ( use of components. The ultimate goal of component programming is to) 182.01 590.3 P
+-0.16 (develop a scienti\336c foundation for 1\051 the design of software based on software components) 116.37 579.3 P
+0.11 (and 2\051 the discovery and development of those components. As I shall ar) 116.37 568.3 P
+0.11 (gue later) 408.84 568.3 P
+0.11 (, compo-) 443.26 568.3 P
+0.18 (nent programming depends on advances in programming language technology) 116.37 557.3 P
+0.18 (, algorithms) 430.97 557.3 P
+0.4 (and data structures, and programming methodology) 116.37 546.3 P
+0.4 (. At the present time, enough progress) 324.34 546.3 P
+1.18 (has been made in all these areas to make component programming feasible. This paper) 116.37 535.3 P
+0.29 (presents the practical requirements for component programming, speculates on why it has) 116.37 524.3 P
+-0.04 (not worked so far) 116.37 513.3 P
+-0.04 (, and gives examples based on the C++ Standard T) 186.1 513.3 P
+-0.04 (emplate Library \050STL\051) 387.92 513.3 P
+1.05 (to show the promise of component programming. It concludes with a summary of what) 116.37 502.3 P
+(needs to be done to accomplish the vision of component programming.) 116.37 491.3 T
+4 14 Q
+(2  Requirements on components and catalogs) 116.37 461.64 T
+0 10 Q
+1.31 (Component programming postulates that software must be developed from components) 116.37 440.3 P
+1.05 (found in standard software catalogs. This by itself is not a new goal. Indeed, it was the) 116.37 429.3 P
+0.81 (vision presented by McIlroy at the NA) 116.37 418.3 P
+0.81 (T) 274.52 418.3 P
+0.81 (O conference in 1968[6]. Y) 280.45 418.3 P
+0.81 (et that vision has not) 392.92 418.3 P
+0.4 (been realized to date because we have not concentrated on the essential requirements that) 116.37 407.3 P
+-0.13 (components must satisfy) 116.37 396.3 P
+-0.13 (. T) 214.35 396.3 P
+-0.13 (o enable software development primarily from component cata-) 224.63 396.3 P
+1.95 (logs, components and catalogs must meet the following fundamental requirements: 1\051) 116.37 385.3 P
+0.41 (components in a catalog must form a systematic taxonomy both to guide the design of an) 116.37 374.3 P
+0.38 (application and to enable the search for) 116.37 363.3 P
+0.38 (, and the selection of, components; 2\051 components) 275.44 363.3 P
+0.56 (should be) 116.37 352.3 P
+3 F
+0.56 (generic) 158.61 352.3 P
+0 F
+0.56 ( so that they have wide applicability; 3\051 components should be) 188.6 352.3 P
+3 F
+0.56 (ef\336cient) 447.26 352.3 P
+0 F
+-0.19 (so that they meet the demands of real applications; and 4\051 catalogs must be comprehensive,) 116.37 341.3 P
+1.5 (that is, they must cover a signi\336cant portion, if not all, of the taxonomy mentioned in) 116.37 330.3 P
+1.28 (requirement 1. In this section I will explain each of these requirements in general with) 116.37 319.3 P
+0.57 (appropriate references to existing software libraries and how they succeed or fail to meet) 116.37 308.3 P
+1.12 (some of these requirements. The following section will discuss an example catalog that) 116.37 297.3 P
+0.38 (meets all four requirements. By use of examples from this catalog, I show how McIlroy\325) 116.37 286.3 P
+0.38 (s) 475.03 286.3 P
+(vision can be realized.) 116.37 275.3 T
+4 F
+0.06 (Components in a catalog must form a systematic taxonomy) 116.37 252.3 P
+0.06 (.) 368.5 252.3 P
+0 F
+6.57 (Many existing libraries) 373.01 252.3 P
+0.49 (are collections of loosely-related, or worse, unrelated, components. The successful \322com-) 116.37 241.3 P
+-0.19 (ponent\323 catalogs have been mathematical libraries and standard libraries supported for par-) 116.37 230.3 P
+0.12 (ticular languages, for example, the) 116.37 219.3 P
+3 F
+0.12 (stdio) 257.76 219.3 P
+0 F
+0.12 ( C library for buf) 277.21 219.3 P
+0.12 (fered input-output. Such libraries) 345.81 219.3 P
+1.08 (contain closely-related components that cover a well-de\336ned domain of functionality) 116.37 208.3 P
+1.08 (. A) 465.63 208.3 P
+0.5 (user knows the functionality provided and the cost of using the components. The compo-) 116.37 197.3 P
+-0.19 (nents are designed and implemented to support the advertised functionality as ef) 116.37 186.3 P
+-0.19 (\336ciently as) 435.5 186.3 P
+0.14 (possible. Few people would venture to write their own buf) 116.37 175.3 P
+0.14 (fered i/o routines or linear alge-) 351.31 175.3 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "2" 24
+%%Page: "1" 25
+595.3 841.9 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+118.32 106.95 481.1 131.95 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 10 Q
+0 X
+(1) 476.1 125.28 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 14 Q
+(Component Pr) 212.03 661.63 T
+(ogramming\321) 300.05 661.63 T
+(a fr) 190.39 641.63 T
+(esh look at softwar) 211.51 641.63 T
+(e components) 323.64 641.63 T
+0 10 Q
+(Mehdi Jazayeri) 266.96 612.3 T
+0 9 Q
+(Distributed Systems Department) 238.9 591.97 T
+(T) 241.37 581.97 T
+(echnical University of V) 246.24 581.97 T
+(ienna) 334.43 581.97 T
+(A-1040 V) 248.3 571.97 T
+(ienna, AUSTRIA) 284 571.97 T
+(jazayeri@tuwien.ac.at) 257.52 561.97 T
+(http://www) 239.19 551.97 T
+(.infosys.tuwien.ac.at/) 279.61 551.97 T
+4 F
+1.47 (Abstract.) 144.72 521.97 P
+0 F
+1.47 (All engineering disciplines rely on standard components to design and) 184.17 521.97 P
+0.6 (build artifacts. The key technical challenge in software engineering is to enable the) 144.72 511.97 P
+0.6 (adoption of such a model to the development of software. The transformation from) 144.72 501.97 P
+0.07 (line-by-line development to component-based development will address many of the) 144.72 491.97 P
+1.73 (industry\325) 144.72 481.97 P
+1.73 (s persistent productivity and quality problems. Indeed, component-based) 176.72 481.97 P
+2.03 (software development has been a long-standing dream of the software industry) 144.72 471.97 P
+2.03 (,) 448.33 471.97 P
+2.27 (prompting a search for both technical and nontechnical solutions. A successful) 144.72 461.97 P
+0.99 (approach to component-based development requires a comprehensive solution that) 144.72 451.97 P
+0.8 (draws on advances in programming languages, programming paradigms, algorithm) 144.72 441.97 P
+1.19 (analysis, and software design. This paper presents an approach based on the C++) 144.72 431.97 P
+0.04 (Standard T) 144.72 421.97 P
+0.04 (emplate Library) 183.88 421.97 P
+0.04 (. More than a traditional library) 241.07 421.97 P
+0.04 (, STL embodies a concrete) 354.18 421.97 P
+0.83 (approach to software design based on a well-de\336ned taxonomy and theory of soft-) 144.72 411.97 P
+0.6 (ware components. I present the fundamental contributions of STL to a paradigm of) 144.72 401.97 P
+3 F
+1.46 (component pr) 144.72 391.97 P
+1.46 (ogramming) 195.59 391.97 P
+0 F
+1.46 (\321a component-based software development paradigm in) 237.08 391.97 P
+0.94 (which there is a clear separation between component development and application) 144.72 381.97 P
+-0.04 (development. I motivate component programming, give the requirements for compo-) 144.72 371.97 P
+0.55 (nents and catalogs, and give an example of component programming applied to the) 144.72 361.97 P
+-0.14 (standard Keyword in Context \050KWIC\051 problem. I then summarize the implications of) 144.72 351.97 P
+-0.06 (component programming for the software industry and for software engineering edu-) 144.72 341.97 P
+(cation.) 144.72 331.97 T
+4 F
+2.1 (Keywords and phrases:) 144.72 311.97 P
+0 F
+2.1 ( Software components, genericity) 239.43 311.97 P
+2.1 (, component program-) 366.13 311.97 P
+(ming, programming paradigms) 144.72 301.97 T
+4 14 Q
+(1  Introduction) 116.37 268.63 T
+0 10 Q
+1.4 (A fundamental weakness of software engineering is the lack of a scienti\336c foundation.) 116.37 247.3 P
+0.09 (There are no laws that govern the decomposition of a software design into a set of compo-) 116.37 235.3 P
+0.77 (nents or the selection of a set of components to implement a given design. The practical) 116.37 223.3 P
+0.2 (implication of this problem is that we still develop software one line at a time. Indeed, the) 116.37 211.3 P
+-0.2 (essential technical challenge in software engineering is to transform the industry from rely-) 116.37 199.3 P
+1.4 (ing on line-based development to using component-based development. All other engi-) 116.37 187.3 P
+119.21 689.39 473.54 717.74 R
+7 X
+V
+3 F
+0 X
+1.32 (T) 119.21 711.07 P
+1.32 (o appear in the Pr) 123.85 711.07 P
+1.32 (oceedings of the 5th Eur) 202.09 711.07 P
+1.32 (opean Softwar) 304.77 711.07 P
+1.32 (e Engineering Confer) 363.78 711.07 P
+1.32 (ence,) 452.72 711.07 P
+(September 25-28, Sitges, Spain.) 119.21 700.07 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "1" 25
+%%Trailer
+%%BoundingBox: 0 0 595.3 841.9
+%%PageOrder: Descend
+%%Pages: 25
+%%DocumentFonts: Times-Roman
+%%+ Helvetica-Bold
+%%+ Helvetica
+%%+ Times-Italic
+%%+ Times-Bold
+%%+ Courier
+%%+ Symbol
+%%EOF
+
+
+

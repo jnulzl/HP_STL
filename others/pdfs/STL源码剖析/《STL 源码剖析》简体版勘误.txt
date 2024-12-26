@@ -1,0 +1,1123 @@
+本勘误档更新日期: 2003/07/09
+《STL 源码剖析》简体版
+华中科技大学出版社 出版, 2002
+目前刷次: 2002/06 第一刷 印量  00001~10000
+          2002/08 第二刷 印量  10001~15000
+注意：以下各项修正皆以日期排序
+======================================================
+书籍内容更正，有两种作法，一是在网际网路上做个专属勘误
+网页，让大家上去看。这是比较即时的作法。而更理想更负责
+的作法是：不但有勘误网页，并且在新刷中予以更正 -- 如果
+有新刷的话。
+不过，理想与现实之间需要一点协调。书籍的制作是这样的，
+制版与印刷时，是以台（8 或 16 页）为单位。因此，每换一
+页，同台的各页统统要换过。这便造成印制成本的大量增加。
+以前，我从不考虑成本，只要我认为书籍内容有修改必要，即
+使只是某个字词用得不甚理想，我都会请出版社更新。出版社
+也都全力配合（这一点让我非常感谢）。
+慢慢地，我的行事不再这麽霹雳，我觉得我多少也要站在出版
+社的立场想想。所以我打算，如果是关系到对错正误的根本性
+问题，我便一定在新刷修正。如果是易判别的错别字或排版误
+失或用词不很恰当┅等等，我便先在勘误网页上明载，但不求
+立刻於新刷中更正。直到收集来的这类误失较为密集了，才一
+并於下一刷修正。
+哪些是新刷已修正的，哪些是暂请读者自行动手更改的，我会
+在勘误网页（网址见书封底）上很清楚地说明。
+这是个便宜法门，请读者见谅。
+书籍应该在出版前就详细检查，以完美之姿出现。但是完美很
+难达到。对於下列大大小小轻重不等的误失，我谨向读者说抱
+歉。
+本档欢迎广为流传，谢谢。
+以下为更新记录。如果您购买的是第 n 刷，请将以下第 n+1
+刷之後的更新内容自行修正至书上。谢谢
+======================================================
+以下暂请读者自行更正：
+（注意，Lm 表示第 m 行，L-n 表示倒数第 n 行）
+■pxxii, L-3（笔误）
+原文：exception specialization
+修改：exception specification
+感谢：edward
+日期：2002/06/01
+■p36, L-3（笔误）
+原文：最後一行便是产生「function template 具现体」print<int> 的一个暂时对象。
+修改：最後一行便是产生「class template 具现体」print<int> 的一个暂时对象。
+感谢：jaulueng
+日期：2002/06/01
+■p44,L11（笔误）
+原文：default constructor。
+修改：destructor。
+感谢：jjhou
+日期：2002/06/01
+■p44,L-10
+原文：等同於 new(const void*) p) T(x)
+更正：等同於 new((void*) p) T(x)
+讨论：p 转型为 (const void*) 之後，将成为一个 non-const pointer to const value，
+      那麽就无法在该指针所指位置执行 construction 动作了。那可不妙。
+      所以我认为不该有 const。如果转型为 (void* const) 倒是可以（实验证实）。
+提示：请同时修改《泛型程式设计与 STL》繁体版 p189, L11.
+感谢：jaulueng
+日期：2002/06/01
+■p63图2-5, p65图2-6, p69图2-7
+说明：图太大，上端右侧被切断一小部份。被切断的是 free_list[16]
+      的 #14,#15 两个元素。
+感谢：jjhou
+日期：2002/06/01
+■p95,L-15（笔误）
+原文：advance(i, n, input_iterator_tag());
+修改：__advance(i, n, input_iterator_tag());
+感谢：sam
+日期：2002/06/01
+■p120,L-3
+原文：if (ivite)             iv.erase(ivite);
+修改：if (ivite != iv.end()) iv.erase(ivite);
+感谢：ikai
+日期：2002/06/01
+■p121,L4,L5 (变量名称混乱，肇因於程序修改过程中的易名。没处理好，很抱歉)
+原文：ite = find(ivec.begin(), ivec.end(), 2);
+      if (ite)               ivec.insert(ite,3,7);
+修改：ivite = find(iv.begin(), iv.end(), 2);
+      if (ivite != iv.end()) iv.insert(ivite,3,7);
+感谢：ikai
+日期：2002/06/01
+■p123,L2（补充）
+原文：// 将原vector 的备用空间中的内容也忠实拷贝过来（侯捷疑惑：啥用途？）
+讨论：此注解所在之函数 insert_aux(iterator position, const T& x); 允许我们在
+      任意位置 position 安插元素值 x。如果此函数被 push_back() 调用（如本页），
+      由於 position 将会是 end()，所以上述注解所言那行的确没有用途。
+      但 insert_aux() 也可能被 insert(iterator p, const T& x) 调用，此时
+      insert_aux() 的叁数 position 可能不是 end()，那麽上述注解所言那行动作
+      就有必要了（此时它并非拷贝备用空间的内容，而是拷贝安插点之後的内容）。
+修改：// 将安插点後的原内容也拷贝过来（提示：本函式也可能被 insert(p,x) 调用）
+感谢：ikai
+日期：2002/06/01
+■p147,L-8（笔误）
+原文：可容纳32/sizeof(int)=4个元素
+修改：可容纳32/sizeof(int)=8个元素
+感谢：ikai,sam
+日期：2002/06/01
+■p176,L7（不够好。重新修润）
+原文：
+ 执行一个所谓的 percolate down（下放）程序：
+ 将根节点（最大值被取走後，形成一个「洞」）填入上述那个失去生存空间的叶节点值，
+ 再将它拿来和其两个子节点比较键值（key），并与较大子节点对调位置。
+修改：
+ 执行一个所谓的 percolate down（下放）程序：
+ 将上述那个失去生存空间的叶节点值填入根节点（最大值被取走後，根节点形成一个「洞」），
+ 再将该值拿来和当前的两个子节点比较，并与较大子节点对调位置。
+感谢：jjhou
+日期：2002/06/01
+★注意：这样的修润仍是不正确的，後面续有讨论。为保持讨论之完整性，本条仍保留。
+■p178,L9（补充）
+原文：// 依侯捷之见，下面直接改为 *(first + holeIndex) = value; 应该可以。
+修改：请在其下加一行如下：
+      // 读者回应：不可如此，试套4.7.4节范例即知。侯捷测试：验证後的确不行。
+读者来信：
+  如果以此法套用 p.181 例子，先做一个 heap 9 7 8 3 5 0 2 3 1 4，
+  然後 pop_heap，结果 heap 将变成 8 7 2 3 5 0 4 3 1
+  而正确结果应该是 8 7 4 3 5 0 2 3 1。
+  故不可直接改为 *(first + holeIndex) = value;
+感谢：ikai
+日期：2002/06/01
+★注意：这样的修润仍是不正确的，後面续有讨论。为保持讨论之完整性，本条仍保留。
+■p179, 图4-23 左侧从上往下第三个子图的 array 内容（笔误）
+原文：32 21 26 19 ...
+修改：31 21 26 19 ...
+感谢：ikai
+日期：2002/06/01
+■p179~p180, 图4-23 各子图的 array 表现
+读者来信讨论：array 前後似不应再有┅┅的符号，否则不符 "2*n+2" 个节点。
+侯捷回覆：在一个很大的 array 中，你可以取任意一个 range 做为 heap。
+  图中的┅┅ 便是用来表现该 range 以外的部分。也许我在图中以两个迭代器（箭头）
+  标出 heap 范围（也就是目前每个子图的 array 灰色范围），就比较不易起误会了。
+感谢：ikai
+日期：2002/06/01
+■p198,图5-1文字说明最後一行（笔误）
+原文：hast_x 都内含一个 hashtable。
+修改：hash_x 都内含一个 hashtable。
+感谢：jjhou
+日期：2002/06/01
+■p247,L-9（笔误）
+原文：因为约束制条件如此之少，
+修改：因为制约条件如此之少，
+感谢：jjhou
+日期：2002/06/01
+■p252,L-1（注14.笔误）
+原文：吃肥走瘦是台湾离俚语，意指...
+修改：吃肥走瘦是台湾俚语，意指...
+感谢：jjhou
+日期：2002/06/01
+■p292,L-2（制版过程出错）
+原文：前闭後开区间（或称左涵盖区间）表示法，写成 [first,last]
+修改：前闭後开区间（或称左涵盖区间）表示法，写成 [first,last)
+感谢：sam
+日期：2002/06/01
+■p305, 6.3.7标题（笔误）
+原文：itoa
+修改：iota
+感谢：jaulueng
+日期：2002/06/01
+注意：请一并修改目录6.3.7
+■p426,图8-1第三横列（笔误）
+原文：Inserter(Container& x,
+修改：inserter(Container& x,
+感谢：jjhou
+日期：2002/06/01
+
+■p23,L-9~L-7（补充）
+原文：
+  #ifdef __STL_NEED_TYPENAME
+  # define typename // 侯捷：难道不该 #define typename class 吗?
+  #endif
+讨论：
+  的确不该如我所言。在整个 SGI STL 中，template<> 内用的关键字是 "class"。
+  关键字 "typename" 只用於除此之外的其馀地方（告诉编译器该处将出现一个
+  name of type（如果编译器推论能力够强，可以不依赖这个关键字）；在那种地方
+  当然不能将关键字 "typename" 以关键字 "class" 替换之；应替换为 none.
+  这个道理就像本页接下来的三行，当编译器不支援时， 就将 "explicit" 替换为 none.
+感谢：Wesley Bao
+日期：2002/07/24
+■p57,L7（勘误）
+原文：// 以下都是函数指标，所代表的函数将用来处理内存不足的情况
+修改：// 以下函数将用来处理内存不足的情况
+感谢：liny
+日期：2002/07/24
+■p61 L-4（勘误）
+原文：n 从 1 起算
+修改：n 从 0 起算
+感谢：wangfei
+日期：2002/07/24
+■p67 chunk_alloc() 作法讨论
+读者来函：
+  当 memory pool 还有空间但不够一个区块大小时，处理如下：
+  if ( bytes_left > 0 ) {
+     obj * volatile * my_free_list =
+              free_list + FREELIST_INDEX ( byte_left );
+     ((obj *) start_free)->free_list_link = *my_free_list;
+     *my_free_list = (obj *)start_free;
+  }
+  两个问题：
+  1. 当 byte_left < 4 时，而 sizeof(obj) 为 4; 以下这句话：
+     ((obj *) start_free)->free_list_link = *my_free_list;
+     岂不是要出问题？
+  2. 即使 byte_left > 4，但小於区块尺寸大小，将来又有什麽用呢？
+     例如当 byte_left 为 5，则 my_free_list 指向第一个区块，而
+     此区块尺寸为 8，当用户要配置 7 时岂不是会出问题？
+侯捷回覆：
+  1. 注意本函式最前注解（p66）：size 已适当上调至 8 的倍数
+  2. 你的问题出在对 p67,L13「以下试着让记忆池中的残馀零头还有利用价值」的疑惑.
+     我举个例子，如果此刻要求一个大小为 24 的 obj，而此刻 free_list[2] 无法供应
+     任何记忆体，於是向 memory pool 求助，假设此时 pool 剩馀（必为 8 倍数）16，
+     於是将这 16 挂到 free_list[1] 最前端（这就是残馀零头的利用），
+     然後再向系统索求 24*(40+n)...（之後的动作详见 p68 第二段）
+     注意，memory pool 是指图2-7右下角那块红色区域，不是指 free_list[ ] 所
+     维护的 linked lists（虽然有时候可能会混着说）。
+感谢：Sam_Yang
+日期：2002/07/24
+■p67 SGI STL allocator 作法讨论
+读者来函：SGI STL allocator 所关连的整个 free_list[ ]（如图2-7）
+     在何时何处被释放？
+侯捷回覆：不释放，一直持有（有点 garbage collection 的味道），等待再被运用。
+          直到程式结束，自然就被系统收回。这里没有 memory leak 的问题，因为
+          一切都在掌控之下，所有记忆体都可再被利用。
+感谢：抱歉，佚失
+日期：2002/07/24
+■p68,L12,L-7
+原文：为内存池注入活水源头
+修改：为内存池注入源头活水
+感谢：wangfei
+日期：2002/07/24
+■p96,注3往上第2行（勘误）
+原文：其型别应该隶属前述五个迭代器类型之一
+修改：其型别应该隶属上述四个迭代器类型（I,F,B,R）之一
+说明：标准程式库中并未针对 Output Iterators 设计出 __advance()
+感谢：Sam_Yang
+日期：2002/07/24
+■p99,L-5（勘误）
+原文：当客端调用 distance() 并使用 Output Iterators 或 Forward Iterators 或 ...
+修改：当客端调用 distance() 并使用 Forward Iterators 或 ...
+说明：拿掉 Output Iterators，
+      因为标准程式库中并未针对 Output Iterators 设计出 __distance()
+感谢：Sam_Yang
+日期：2002/07/24
+■p149,L23（笔误）
+原文：cur = last;  // 的最后一个元素
+修改：cur = last;  // 的最后一个元素（的下一位置）
+感谢：jaulueng
+日期：2002/07/24
+■p151,L-8（补充）
+原文：// 以上三行何不改为...
+说明：的确可以将以上三行改为如我注释中所言的 return *(finish-1);
+      其中 (finish-1) 唤起的是 p150 的 self operator-(difference_type n) const;
+感谢：wanghua
+日期：2002/07/24
+■p155,图4-13中右侧文字（笔误）
+原文：ideq::push_back(0);
+      ideq::push_back(1);
+      ideq::push_back(2);
+修改：ideq.push_back(0);
+      ideq.push_back(1);
+      ideq.push_back(2);
+感谢：jaulueng
+日期：2002/07/24
+■p156,L5（修润）
+原文：最後缓冲区尚有一个以上的备用空间
+修改：最後缓冲区尚有两个（含）以上的元素备用空间
+感谢：jaulueng
+日期：2002/07/24
+■p156,L9（勘误）
+原文：最後缓冲区已无（或只剩一个）元素备用空间
+修改：最後缓冲区只剩一个元素备用空间
+读者说明：L17 说：也就是说只有当最後一个缓冲区只剩一个备用元素空间...
+侯捷回应：同意。我重新检测整个演算法，确定 deque 的任何缓冲区的确不可能
+          无备用空间。当元素备用空间为 1 而即将被使用时，p156 的 push_back_aux()
+          会先被唤起，配置新缓冲区（成为备用空间），然後才将原剩的那个
+          备用元素空间拿来用。
+感谢：jaulueng
+日期：2002/07/24
+■p157,图4-14中右侧文字（笔误）
+原文：id::push_back(3);
+修改：ideq.push_back(3);
+感谢：jaulueng
+日期：2002/07/24
+■p159,图4-15上侧文字（笔误）
+原文：ideq::push_back(99);
+修改：ideq.push_back(99);
+感谢：jjhou
+日期：2002/07/24
+
+■p160,图4-16上侧文字（笔误）
+原文：ideq::push_back(98);
+      ideq::push_back(97);
+修改：ideq.push_back(98);
+      ideq.push_back(97);
+感谢：jjhou
+日期：2002/07/24
+■p163,L-16（笔误）
+原文：// 第一缓冲区有一个（或更多）元素
+修改：// 第一缓冲区有二个（或更多）元素
+感谢：jaulueng
+日期：2002/07/24
+■p163,L-5（补充）
+原文：// 将第一缓冲区的第一个元素解构
+修改：// 将第一缓冲区的第一个（也是最後一个、唯一一个）元素解构
+感谢：jaulueng
+日期：2002/07/24
+■p171,L11（补充）
+原文：empty, size, back, push_back, pop_back
+修改：empty, size, front, back, push_front, push_back, pop_front, pop_back
+感谢：jaulueng
+日期：2002/07/24
+■p171,L12（勘误）
+原文：以 list 为底部结构并封闭其头端开口
+修改：以 list 为底部结构并封闭其某些接口
+感谢：jaulueng
+日期：2002/07/24
+■p176 1,2段；p178 L8,L9（勘误）
+修改1：以下是 p176 一、二两段修改後之完整文字：
+  图4-22是pop_heap 算法的实际操演情况。既然身为max-heap，最大值必然在根节点。
+  pop 动作将根节点取走 ─ 其实是设至底部容器vector之尾端节点 ─ 後（逻辑上此刻
+  可将根节点设想成一个「空洞节点」），为满足 "complete" binary tree 的条件，
+  必须割舍最下层最右端叶节点，并将其值重新安插至max-heap（因此有必要重新调整
+  heap结构）。
+  为满足max-heap 次序特性（每个节点的键值都大於或等於其子节点键值），我
+  们执行所谓的 percolate down（下放）过程：将空洞节点和其较大子节点「对调」，
+  并持续下放直至叶节点为止。然後将前述被割舍之元素值设给这个「已到达叶
+  层之空洞节点」，再对它执行一次 percolate up（上溯）过程。这便大功告成。
+修改2：以下两行请这麽修改：
+       p178 L8  // 将欲调整值填入目前的洞号内。注意，此时肯定满足次序特性。
+       修改为： // 此时（可能）尚未满足次序特性。执行一次 percolate up 动作。
+       p178 L9  // 依侯捷之见，下面...
+       请删除
+感谢：jaulueng
+日期：2002/07/24
+■p180,L-3（勘误）
+原文：// (即将重排之子树的)头部向前一个节点
+修改：// (已重排之子树的)头部向前移一个节点
+感谢：jaulueng
+日期：2002/07/24
+■p182,L5,L6（补充）
+原文：
+      // array 无法动态改变大小，因此不可以对满载的 array 做 push_heap() 动作。
+      // 因为那得先在 array 尾端增加一个元素。
+修改：
+      // array 无法动态改变大小，因此不可以对满载的 array 做 push-heap 动作。
+      // 因为那得先在 array 尾端增加一个元素。如果对一个满载的 array 执行
+      // push_heap()，该函数会将最後一个元素视为新增元素，并将其馀元素视为
+      // 一个完整的 heap 结构（实际上它们的确是），因此执行後的结果等於原先
+      // 的 heap。
+感谢：jaulueng
+日期：2002/07/24
+■p183,L10（笔误）
+原文：「依权值高低自动递增排序」
+修改：「依权值高低自动递减排序」
+感谢：jaulueng
+日期：2002/07/24
+■p209,图5-14（补充）
+修改：键值为 8 的节点旁，应该打一个 X
+感谢：jaulueng
+日期：2002/07/24
+■p210,L1（补充）
+原文：我们先对 P,G 做一次单旋转，再更改 P,G 颜色，即可...
+修改：我们先对 P,G 做一次单旋转，并更改 P,G 颜色，即可...
+说明：从 p226 L7~L9 可看出是先改变颜色再旋转，但两者次序其实无关紧要，
+      因此略做如上修改。p210,p211 是逻辑观念的说明，和 p226 之程式码
+      不见得一一对应（p226 之程式码有许多实作上的巧妙安排）。
+感谢：jaulueng
+日期：2002/07/24
+■p211,图 5-15c（讨论）
+讨论：以状况3 来说，RB-tree 是不会旋转的，其结果会是：
+      key80、90 两节点颜色由红变黑，key85 节点颜色由黑变红，树形维持不变。
+      同理，p211,图 5-15d 状况4 亦然，只需改变颜色，不须旋转树形。
+回覆：状况3 不改树形，只改颜色，前提是 L2 所言「此时如果 GG 为黑」。
+      至於状况4，不理解如何能够「不改树形，只改颜色」？
+感谢：jaulueng
+日期：2002/07/24
+■p212, 5.2.2 一个由上而下的程序（讨论）
+读者来函：
+  由 p225~p226 __rb__tree_rebalance() 源码知道它并不是「一个由上而下的程序」，
+  而是一个 bottom-up procedure。以图5-15e 为例，当新增 key35 节点时，
+  根据 p225 L-8~L-2 源码可知，直接判断父节点和伯父节点是否皆为红，而非
+  如 p212,L4 所说「沿着 A 的路径...」
+建议：将 top-down procedure 等相关文字改成 bottom-up procedure，将图5-15e 的
+      虚线箭头方向改成指向 key30 节点。
+回覆：本段演算法描述系以下列书籍 18.5 节为依据（见本书 p469 介绍）：
+        "Algorithms, Data Structures and Problem Solving with C++"
+        by Mark Allen Weiss, AW, 1995
+      这份描述与 SGI STL 实作手法略有差异，但不能据此认为这份描述不对。
+      SGI STL 之实作手法的确如您所言。此手法完全依据以下书籍 p266,p268 提供
+      之 pseudo code：
+        "Introduction to Algorithms", by Thomas Ho. Cormen, etc.
+      该书在 RB-tree 主题上的文字描述甚少。
+感谢：jaulueng
+日期：2002/07/24
+■p212,L-2（讨论及修正）
+原文：要不直接安插，要不安插後再一次单旋转即可。
+读者来函：看不出为何须「再一次单旋转」
+回覆：如果此时新插节点之父节点为红，就应该再执行旋转。本页所举例子不需再旋转。
+修改：要不直接安插，要不安插後（若父节点为红）再一次旋转（单双皆可能）即可
+感谢：jaulueng
+日期：2002/07/24
+■p212,L-4（笔误）
+原文：但是如果 A 的父节点 P 亦为红色...
+修改：但此时如果 X 的父节点 P 亦为红色...
+感谢：jjhou
+日期：2002/07/24
+■p217,L-3（笔误）
+原文：__rb_tree_iterator_base 的 increment() 和 decrement() ...
+修改：__rb_tree_base_iterator 的 increment() 和 decrement() ...
+感谢：jjhou
+日期：2002/07/24
+■p220,L-13; P222,L11（笔误）
+原文：// 和 root（在 iterator.operator++ 中）
+修改：// 和 root（在 iterator.operator-- 中）
+感谢：jaulueng
+日期：2002/07/24
+■p226,L-10; p227,L14（勘误）
+原文：// ...此时必须做树形旋转（及颜色改变，在程式它处）。
+修改：// ...此时可能需树形旋转（及颜色改变，在程式它处）。
+提示：p232 图5-19 M => N 的过程即可看出，当新节点（红）之父节点为红，
+      在 M 的情况下只需做颜色改变，不需树形旋转
+感谢：jaulueng
+日期：2002/07/24
+■p228,L17（遗漏）
+原文：itree.insert_unique(12);
+修改：itree.insert_unique(12);   // __rb_tree_rebalance()
+                                      //  __rb_tree_rotate_right
+讨论：亦可由观察 P232 图旁的两行 codes 而知
+感谢：jaulueng
+日期：2002/07/24
+■p228,L19（笔误。程式码拷贝到书上时放置错误）
+原文：
+  cout << itree.size() << endl;   // 9
+  for(; ite1 != ite2; ++ite1)
+      cout << *ite1 << ' ';  // 5 6 7 8 10 11 12 13 15
+  cout << endl;
+  // 测试颜色和 operator++（亦即 __rb_tree_iterator_base::increment）
+  rb_tree<int, int, identity<int>, less<int> >::iterator  ite1=itree.begin();
+  rb_tree<int, int, identity<int>, less<int> >::iterator  ite2=itree.end();
+  __rb_tree_base_iterator rbtite;
+  for(; ite1 != ite2; ++ite1) {
+修改：
+  cout << itree.size() << endl;   // 9
+  rb_tree<int, int, identity<int>, less<int> >::iterator  ite1=itree.begin();
+  rb_tree<int, int, identity<int>, less<int> >::iterator  ite2=itree.end();
+  for(; ite1 != ite2; ++ite1)
+      cout << *ite1 << ' ';  // 5 6 7 8 10 11 12 13 15
+  cout << endl;
+  // 测试颜色和 operator++（亦即 __rb_tree_iterator_base::increment）
+  ite1=itree.begin();
+  __rb_tree_base_iterator rbtite;
+  for(; ite1 != ite2; ++ite1) {
+感谢：jaulueng
+日期：2002/07/24
+■p230,图 B（补充）
+修改：在图 B 的节点 10 左上角加上一个 root()，类似图 C 的节点 10。
+说明：此时 root() 已指向节点 10。
+感谢：jaulueng
+日期：2002/07/24
+P251 图5-23的说明文字（笔误）
+原文：二次探测（linear probing）
+修改：二次探测（quadratic probing）
+感谢：wangfei
+日期：2002/07/24
+■p257,L-14（勘误）
+原文：// ... 最接近并大於 n 的那个质数
+修改：// ... 最接近并大於或等於 n 的那个质数
+说明：因为函式内采用 lower_bound() 演算法
+感谢：jaulueng
+日期：2002/07/24
+■p259,L5（勘误）
+原文：其中的 next_size() 传回最接近 n 并大於 n 的质数
+修改：其中的 next_size() 传回最接近 n 并大於或等於 n 的质数
+说明：因为函式内采用 lower_bound() 演算法
+感谢：jaulueng
+日期：2002/07/24
+■p262, L14（勘误）
+原文：// 将新节点安插於目前位置
+修改：// 将新节点安插於目前位置之後
+说明：由 L14、L15 程式码可知。
+感谢：jaulueng
+日期：2002/07/24
+■p266, 图5-26上一段最後一行（笔误）
+原文：循序加入 6 个元素：53, 55, 2, 108, 59, 63
+修改：循序加入 6 个元素：59, 63, 108, 2, 53, 55
+说明：见图5-26上端之说明： insert_unique 次序：59, 63, 108, 2, 53, 55
+感谢：jaulueng
+日期：2002/07/24
+■p489, 索引的 reserve()（笔误）
+原文：reserve() 360
+修改：删除之，因为 p360 出现的是 reverse() 而非 reserve()
+感谢：jaulueng
+日期：2002/07/24
+■p81,auto_ptr（讨论）
+读者来函：
+  我发现 auto_ptr 有一个问题，就是它的 T *pointee 变量为私有的，
+  在实际使用中不能编译通过。如下例：
+  auto_ptr<int> aInt(new int[10]);
+  auto_ptr<char> aChar = aInt;
+  编译时，出现如下错误:
+  error C2248: 'pointee' : cannot access private member
+                           declared in class 'auto_ptr<int>'
+  我是在 VC6 下编译的，或许在 gcc 下可以编译通过，我还没有试过。於是我
+  在 VC6 下将 pointee 改为 public，然後编译通过。当然这样做有背信息隐蔽原则，
+  或许在 VC6 下也可以保持 private，也能编译通过，如果可以，可否告诉我，谢谢。
+侯捷回覆：
+  (1) pointee 不宜宣告为 private.
+  (2) 完整的 auto_ptr 可叁考 C++ 标准程式库，
+        或《More Effective C++》p291.（有 bug）
+        或《C++ 标准程式库》p56.
+  (3) 请认识 member template 的用途。
+  (4) 不存在针对 array 而写的 auto_ptr，见《C++ 标准程式库》p47。
+  (5) 建议详读《C++ 标准程式库》4.2 节，其中有 auto_ptr 的发展动机、
+        错误运用、运用实例、设计细目
+感谢：larrin
+日期：2002/07/24
+■以下为简体版疏失
+p473 L-1 "相关字段" --> "相关栏目"
+p467 L3  《C++ Primer 繁体中文版》为 "  峰图书公司" 出版
+p466 L-6 "订制型" --> "定制型"
+p427 L3  "系结" --> "绑定"
+     L-8 "快取装置" --> "高速缓冲区"
+p426 图8-1第一横列， Back_inserter --> back_inserter
+p318 L-2  "多载函数" --> "重载函数"
+p305 查 SGI STL 得知 The name iota is taken from the programming language APL.
+     怀疑 iota 是德语单词。
+p288 表格第一栏   Copy --> copy（共三个）
+感谢：solstice
+日期：2002/07/24
+■以下为简体版疏失
+pI（引介文）L-4  "那麽" 简繁转换有误
+p69 图2-7 #7处箭头说明文字   小小箭头及表示 --> 小小箭头即表示
+P98图3-3 解释文字中的 "模拟" 的 "拟" 未进行繁简转换
+感谢：wangfei
+日期：2002/07/24
+
+■p125（讨论）
+读者来函：
+  vector::insert(iterator position, size_type n, const T& x) 函式中呼叫了：
+    fill(position, position + n, x_copy)
+    uninitialized_fill_n(finish, n - elems_after, x_copy)
+    fill(position, old_finish, x_copy)
+  为什麽其中引入并使用 x 的副本 x_copy，使用 x 岂不更好？
+  STL中有多处类似作法，例如 p156 deque::push_back_aux()。
+侯捷回覆：
+  的确应该可以直接使用 x。从逻辑思考角度，x 以 by reference 方式传入，
+  如果又以 by reference 方式传递给 fill() 和 uninitialized_fill_n()，
+  由於去处函式都进行拷贝动作，并不影响 x。所以直接以 x 传递无妨。
+  从实证角度，我如上更改了 SGI STL 源码，可以正确运作。
+感谢：popiano
+日期：2002/07/27
+
+■p141（讨论）
+读者来函：
+  void splice(iterator position, list&, iterator i);
+  void splice(iterator position, list&, iterator first, iterator last);
+  两处的第二叁数 list& 在函式中无用，徒增使用者麻烦，是否多馀？
+侯捷回覆：
+  的确多馀。假设我们想运用 splice() 将 listA 内的单一元素或某个区间
+  接合到 listB 的 position 位置上，由於 listA 内的单一元素
+  或某个区间其实分别以上述的 i 或 [first,last) 即可表现，不必再以
+  第二叁数 list& 来表现 listB。因此这第二叁数派不上用场。
+  这可能是当初过度设计的遗留。
+感谢：popiano
+日期：2002/07/27
+
+■p362（讨论）
+读者来函：
+  void __rotate(RandomAccessIterator first,..,random_access_iterator_tag);
+  这个函式是怎麽工作的？（我手中的 STL 实作产品与书中所列不同）
+侯捷回覆：
+  此函式之工作方式如书上程式码注解。
+  也许我会在新版（不是新刷）中增加一张说明图。
+感谢：popiano
+日期：2002/07/27
+
+■p147~p162（勘误）
+说明：4.4.3 节至 4.4.6 节中我以下面这个实例贯穿解释 deque 缓冲区的变化：
+    deque<int, alloc, 32> ideq(20,9);
+  其中 32 应为「元素个数」，但我在绘图时误想为 32 bytes。
+  於是所有图片皆以 32/sizeof(int) ==> 8 做为缓冲区元素个数。
+  为了不修改图片（这比较难改），我决定修改文本内容。以下是各页修改状况：
+p147,L-9
+原文：假设现在我们产生一个 deque<int>，并令其缓冲区大小为32，
+      於是每个缓冲区可容纳32/sizeof(int)=8个元素。经过某些操作之後，
+修改：假设现在我们产生一个「元素型态为int，缓冲区大小为8（个元素）的 deque
+      （语法型式为deque<int,alloc,8>，见4.4.5节测试程式）。经过某些操作之後，
+p148,图4-12文字解说第3行
+原文：每个缓冲区 32 bytes，可储存 8 个 int 元素。
+修改：每个缓冲区可储存 8 个 int 元素。
+p152,L12
+原文：deque<int,alloc,32> ideq(20,9);
+修改：deque<int,alloc,8>  ideq(20,9);
+p153,L12
+原文：deque<int,alloc,32>::iterator itr;
+修改：deque<int,alloc,8>::iterator itr;
+p153,L19
+原文：deque<int,alloc,32> ideq(20,9);
+      其缓冲区大小为 32 bytes，并令其保留 20 个元素空间，
+修改：deque<int,alloc,8> ideq(20,9);
+      其缓冲区大小为 8（个元素），并令保留 20 个元素空间，
+p162,图4-17顶端
+原文：deque<int,alloc,32>::iterator itr;
+      itr =  find(id.begin(), id.end(), 99);
+修改：deque<int,alloc,8>::iterator itr;
+      itr =  find(ideq.begin(), ideq.end(), 99);
+感谢：popiano
+日期：2002/07/31
+
+
+
+■p193,图4-27 标题（笔误）
+原文: 元素 9,1,2,3,4 依序插入到 slist 之後的实际结构
+修改: 找到元素 1 并在该位置上安插 99 後，slist 的状态
+感谢：yyf
+日期：2002/07/31
+
+■p218,图5-17中左部注解L5（繁简转译误失）
+原文: 当迭代器为 end() 时，若对它进行操作,会进入
+修改: 当迭代器为 end() 时，若对它进行 -- 操作，会进入
+说明：繁体版无此错误。
+感谢：yyf
+日期：2002/07/31
+
+■p224,L4（繁简转译误失）
+原文: // 第二叉素表示插入成功与否
+修改: // 第二元素表示插入成功与否
+说明：繁体版无此错误。
+感谢：yyf
+日期：2002/07/31
+
+■p224,L29（勘误）
+原文: // 小於新值（表示遇「小」，将安插於右侧）
+修改: // 新键值不与既有节点之键值重复，於是以下执行插入动作
+说明: 此段程式码如下：
+      #21 iterator j = iterator(y);   // 令迭代器 j 指向安插点之父节点 y
+      #22 if (comp) // 如果离开 while 回圈时 comp 为真（表示遇「大」，将安插於左侧）
+      #23     if (j == begin())       // 如果安插点之父节点为最左节点
+      #24         return pair<iterator,bool>(__insert(x, y, v), true);
+      #25         // 以上，x 为安插点，y 为安插点之父节点，v 为新值。
+      #26     else        // 否则（安插点之父节点不为最左节点）
+      #27         --j;    // 调整 j，回头准备测试...
+      #28 if (key_compare(key(j.node), KeyOfValue()(v)))
+      #29     // ... 目前讨论中的这行注释 ...
+      #30     return pair<iterator,bool>(__insert(x, y, v), true);
+      #31     // 以上，x 为新值安插点，y 为安插点之父节点，v 为新值。
+      从程式逻辑观之，#28 注释应做如上修改
+建议：可试着对 p231 图 H，分别插入 12 或 10，便可清楚理解此处程式之流程和意义。
+感谢：yyf
+日期：2002/07/31
+
+■p264,L1（讨论）
+原文: // 从己方的 buckets vector 尾端开始，插入 n 个元素，其值为 null 指针。
+      // 注意，此时 buckets vector 为空，所以所谓尾端，就是起头处。
+读者来函: 此时 hastable 是空的，但 buckets vector 并不为空，而是存放
+      buckets.size() 个 null指针。以上注释所说明的，是其下一行动作：
+         buckes.insert(buckets.end(), ht.buckets.size(), (node*) 0);
+      其意义是把 buckets vector 尾部因先前 reserve() 而扩充出来的部份
+      初始化为 null 指标。当然，reserve() 也可能根本没有实际扩充 vector，
+      那麽上述一行程式不会执行任何实质性操作。
+侯捷回覆：我想您可能错看了 p263 L-5 的意义：
+         buckets.clear()
+      您可能以为它执行的是 hashtable<>::clear()（就在 p263）
+      事实上它执行的是 vector<>::clear()，而其动作就是将整个 vector 清空，
+      使大小为 0（ref.《C++ 标准程式库》p154）。因此我的注释是正确的。
+      顺带一提，以下值得修改：
+p263,L-6
+原文：这动作是呼叫 vector::clear，造成所有元素为 0
+修改：这动作是呼叫 vector::clear，将整个容器清空
+感谢：yyf
+日期：2002/07/31
+
+■p327,L16（修润）
+原文: // 以下，输出区间的终点与输入区间重叠...
+修改: // 以下，输出区间的终点（就逆向而言）与输入区间重叠...
+■p327,L23（修饰）
+原文: // 以下，输出区间的起点与输入区间重叠...
+修改: // 以下，输出区间的起点（就逆向而言）与输入区间重叠...
+■p327,L-3（修饰）
+原文: // 以下，输出区间的终点与输入区间重叠...
+修改: // 以下，输出区间的终点（就逆向而言）与输入区间重叠...
+■p328,L15（修饰）
+原文: // 以下，输出区间的起点与输入区间重叠...
+修改: // 以下，输出区间的起点（就逆向而言）与输入区间重叠...
+感谢：yyf
+日期：2002/07/31
+
+■p330,L-9,L-7（误植）
+原文: (L-9)  Union of S1 and S2 (S1-S2) : 1 1 2 3 5 7 8 9 11 13
+      (L-7)  Difference of S1 and S2: 7 9 11
+说明: L-9处的 (S1-S2) 应移至 -7
+修改: (L-9)  Union of S1 and S2: 1 1 2 3 5 7 8 9 11 13
+      (L-7)  Difference of S1 and S2 (S1-S2) : 7 9 11
+感谢：yyf
+日期：2002/07/31
+
+■p332,L4（修润）
+原文: // 此刻的 [first1,last1) 和 [first2,last2) 之中有一个是空白区间。
+修改: // 此刻的 [first1,last1) 和 [first2,last2) 之中至少有一个是空白区间。
+说明: 两个区间可能同时到达尾端，形成两个区间同时空白的现象。
+感谢：yyf
+日期：2002/07/31
+
+■p340,L18,L23,L28,L32（繁简转译误失）
+原文: // 删除（但不删除）...
+修改: // 移除（但不删除）...
+说明: 请叁考 p356,L1 的说法。移除是 remove，删除是 delete，两者意义不同。
+      繁体版无此错误。
+感谢：yyf
+日期：2002/07/31
+
+■p398,L4（勘误）
+原文: // RW STL 采用一般教科书写法（直观地对左半段和右半段递归），较易阅读。
+修改: （请将此行拿掉）
+说明: 从 p400 上部的 RW STL 源码可看出，其算法策略和 SGI STL 类似，只是
+      它更进一步把左右两段中较长的一段以递归方式处理，较短一段由 while 循环
+      继续处理，并没有对左右两段分别递归处理。
+检讨：同意。但 yyf 将长短搞反了 :)
+      顺带一提，以下值得修改：
+p400,L5
+原文：__quick_sort_loop(cut, last);  // 对右段递归处理
+修改：__quick_sort_loop(cut, last);  // 较短段以递归方式处理
+p400,L10
+原文：__quick_sort_loop(first, cut);  // 对左段递归处理
+修改：__quick_sort_loop(first, cut);  // 较短段以递归方式处理
+感谢：yyf
+日期：2002/07/31
+
+■p409,L10（修润）
+原文: 便是将小於*(iv.begin()+5)（本例为40）的元素置於该元素之左，其馀...
+修改：便是满足以下条件：(1) 将小於 *(iv.begin()+5)（本例为40）的元素置於
+      该元素之左，其馀...33,40}。(2) 执行完毕後 5th 位置上的...
+感谢：yyf
+日期：2002/07/31
+
+■p446,L11（勘误）
+原文: if (string) *stream << string;   // 如果输出状态无误,输出间隔符号
+修改: if (string) *stream << string;   // 如果间隔符号不为空,输出间隔符号
+感谢：yyf
+日期：2002/07/31
+■pvi,L5, p5,L-1, p11,L1,L2,L4,L-2, p385,L11（笔误）
+原文: Rouge Wave 或 Rauge Wave
+修改: Rogue Wave
+感谢：Wu Yongwei
+日期：2002/08/12
+■p480,L10,L14（笔误）
+原文：make
+修改：nmake
+感谢：konamo
+日期：2002/08/26
+■p266,图5-26 上排方格最後一个方格的编号（笔误）
+原文：#53
+修改：#52
+感谢：jjhou
+日期：2002/09/12
+■第2章关於 memory pool（讨论）
+yongwu.wang 2002/09/25 来信：
+  关於 __default_alloc_template，我写了一些代码测试，发现对於大於 128bytes 的
+  分配没有问题，但是当我分配一些小於 128bytes 的 blocks 时
+  确实用上了 memory pool，并用 free list 串起来，整个分配过程都很正常。
+  但我认为释放时存在问题，释放时调用的函数
+  只是简单的调整指针，并没有真正释放 memory，这也可以理解，因为只是释放一个块，
+  不应该释放整个 pool。那麽整个 pool 在什麽地方释放呢？
+  我发现 __default_alloc_template class 并没有 destructor，
+  memory pool 没有被释放，我跟踪了memory 分配和释放函数，确实发生了memory leak。
+  我的分析对吗？这是 SGI 的 bug 吗？
+侯捷回覆：这不是 bug，这是设计理念。
+  memory pool 一般并不释放 blocks。因为它认为资源由它管理。这不算 memory leak。
+  但这的确有缺点。应该适时释放（一些）blocks 。这是 SGI allocator 值得加强的部分
+  至於程式结束前一刻没有释放整个 pool，那没关系，modern OS 自会收回这一部份，
+  不影响其他 process。
+  欢迎叁考 programmer-13-memory-pool.htm
+感谢：yongwu.wang
+日期：2002/09/25
+■p114,图4-1 解说第四行（笔误）
+原文：hast_x 都内含一个 hashtable。
+修改：hash_x 都内含一个 hashtable。
+感谢：yanghaifeng
+日期：2003/02/20
+
+■p351,L-10（笔误）
+原文：cas1
+修改：case1
+感谢：yanghaifeng
+日期：2003/02/20
+
+■p375,图6-7（笔误）
+原文：图中箭头有两个各名为 up1 和 up2
+修改：请分别改为 ub1 和 ub2，以与图中方块之下的四行 program code 对应
+感谢：yanghaifeng
+日期：2003/02/20
+
+■讨论
+读者来函：
+hi, mr. hou
+    there is a question on STL, look at this statement:
+    
+    m_OneMap.insert(pair<Key, T>(key_value, t_value));   // (1) 
+    
+    Error reported while compiling at Solaris 5.8 with RW STL, 
+    then everything is OK after I changed it into:
+    
+    m_OneMap.insert(value_type<Key, T>(key_value, t_value));  // (2)
+    
+    when compiling with VC with P.J. STL, no error ocurred here.
+    why?
+    thanks!
+侯捷回覆：
+式(1) 是正确的。为什麽它在 Solaris 5.8 with RW STL 无法正常编译，我不知道。
+我在 BCB5 with RW STL 中正确编译了它。
+
+式(2) 的意思是，以 map<...>::value_type<Key,T> 产生一个暂时物件
+并以 key_value,t_value 为初值。根据以下 SGI STL 源码：
+
+template <class Key, class T, class Compare = less<Key>, class Alloc=alloc>
+class map {
+public:
+  typedef Key key_type;	 
+  typedef T data_type;	
+  typedef T mapped_type;	 
+  typedef pair<const Key, T> value_type;  // 元素型别（键值/实值）
+  typedef Compare key_compare;	// 键值比较函式 
+  ...
+};
+
+也就是产生了一个 pair<const Key, T>(key_value,t_value)。拿它来和 (1) 相比，
+只差一个 const。既然 (1) 不被接受，可推想 Solaris 5.8 with RW STL 在 constness 
+上面的限制很硬。请注意，使用 STL 时，很多时候（包括上述情况）都只因为
+卡在 constness，程式便编译不了。constness 实在不可轻忽。
+
+感谢：Collin Lee
+日期：2003/02/20
+
+■讨论
+读者来函：
+p67,L-6 // 注意，任何残馀零头终将被编入适当的 free-list 中备用。
+此句的意思是否是指：
+递回呼叫自己後，若有剩下任何残馀零头，此残馀零头将被编入适当的 free-list 中备用。
+请教老师是不是这个意思呢...?
+
+侯捷回覆：是的。是这个意思。
+感谢：jaulueng
+日期：2003/02/20
+
+■讨论
+读者来函：
+...另外想请教先生，进行源码剖析的时候为什麽不以 SGI STL 3.3为例呢？因为3.3 
+的主要特征就是加入了 concept check，现在这个 library 也早已经在 boost 库里面
+被接受了。在 B.S. 博士提出的 C++0x 建议里面也提到了 Constraints checking。
+不知先生什麽时候会出第二版，会把这一部分加进去？
+
+侯捷回覆：
+我总是得选定一套 source，然後开始正式的文字工作。我的选择心境，记录在本书 pxix.
+本书目前还没打算改版。您的建议我会记住。谢谢。
+
+感谢：lattice
+日期：2003/02/20
+
+■p302,L-3（最後少了一个右小括弧）
+原文：result = binary_op1(result, binary_op2(*i, *(first2+(i-first1)))。
+修改：result = binary_op1(result, binary_op2(*i, *(first2+(i-first1))))。
+感谢：aihua woo
+日期：2003/02/20
+
+■讨论
+读者来函：
+p305 中间，关於 iota 的意义。
+The name iota is taken from the programming language APL.
+而APL语言主要是做数学计算的，在数学中有很多公式会借用希  字母，
+希  字母表中有这样一个字母，大写为Ι，小写为ι，
+它的英文拼写正好是iota，这个字母在θ(theta)和κ(kappa)之间！
+您可以看看http://www.wikipedia.org/wiki/APL_programming_language 
+下面有一段是这样的:
+APL is renowned for using a set of non-ASCII symbols that are an 
+extension of traditional arithmetic and algebraic notation. 
+These cryptic symbols, some have joked, make it possible to construct 
+an entire air traffic control system in two lines of code. 
+Because of its condensed nature and non-standard characters, 
+APL has sometimes been termed a "write-only language", 
+and reading an APL program can feel like decoding an alien tongue. 
+Because of the unusual character-set, many programmers used special 
+APL keyboards in the production of APL code. Nowadays there are 
+various ways to write APL code using only ASCII characters. 
+不知您怎麽看？
+
+侯捷回覆：谢谢您充实我的知识 :)
+感谢：aihua woo
+日期：2003/02/20
+
+
+■讨论
+读者来函：
+我最近在  络上找一些关于STL的技术文章，正好搜索到您的主页上的STL 系列文章 (PDF)。
+关於第二篇文章中最後（17页末）您所写的逐行读取的iterator代码，只要稍加修改即可在
+VC7下运行（VC 6尚未测试过）。修改就是增加一个 operator != 的友元函数：
+
+class myistream_line_iterator {
+ friend bool
+  operator!= (const myistream_line_iterator& x,
+              const myistream_line_iterator& y);
+ 
+  // 以下略┅
+};
+
+inline bool operator!=(const myistream_line_iterator& x,
+                       const myistream_line_iterator& y) 
+{
+   return !operator==(x,y);
+}
+
+由於工作环境主要是VC，所以渴望技术上的成果能在工作中运用。
+另：由于接触 MFC 已有一些时间了，考虑将其转移到G++编译器上。您认为是否可行？
+我见MFC中的代码都比较标准规范，转移的难度似乎比ATL要小很多。在 G++下写WINDOWS平台
+的COM 组件实在是件比较麻烦的事情，不知道有没有合适的类库可以借助？多谢！
+
+侯捷回覆：
+您对程式的修改，我在 VC6 中试了，仍然不能过关。
+我已经把 MFC 的骨干移植到 BCB and GCC 去了（请见 MFCLite）。
+我移植的是不涉及 UI 的部分；也不涉及 COM。
+
+感谢：sclzmbie
+日期：2003/02/20
+
+
+■讨论
+读者来函：
+编译并运行原书 p306 的 6algobase.cpp 时，发现输出结果与书中给出的不同。
+源程序：p307 19～22 行
+cout << lexicographical_compare(stra1, stra1+2, stra2, stra2+2) << "\t";
+// 1 (stra1 < stra2)
+ 
+cout << lexicographical_compare(stra1, stra1+2, stra2, stra2+2, 
+            greater<string>()) << \n";
+// 0 (stra1 !> stra2)
+ 
+因为lexicographical_compare两叁数为[first1,last1),[first2,last2) 
+故代码应改为：
+cout << lexicographical_compare(stra1, stra1+3, stra2, stra2+3) << "\t";
+// 1 (stra1 < stra2)
+ 
+cout << lexicographical_compare(stra1, stra1+3, stra2, stra2+3, 
+            greater<string>()) << "\n";
+// 0 (stra1 !> stra2)
+
+侯捷回覆：不了解您的意思。我的程式执行起来一如书上所示。
+感谢：Echo
+日期：2003/02/20
+
+■讨论
+读者来函：
+在最近我想发展一个 class 其中有一个 table 是用来查寻
+对映关系的(string -> some enum type),
+所以我用 stl::map 来实作,这样可以加速搜寻的时间,又这个table是所有object会共用的,
+而且仅须一份,所以我把它设成static,又这个table不希望object去更改其中的内容,所以
+又必须设成const. 问题就在这里,static const data member必须在cpp file里面定义,
+可是当我定义的时候却会发生compile error(在VC里是 C2057, C2466┅ 
+用aaa::xxx[“string” ] = 2 来设定),我想应该是map里面在设定值的时候
+会动态的产生记忆体,
+违反const┅.可是map没有可以设定初始容量的地方,所以看起来似乎无解~~~
+所以我退而求其次,让map的item变成
+const.. (map<const std::string , const some enum type>)
+又发生 compiler error ( 在VC里是C2535)┅.有一些function redefine┅.
+可是这种方式好像
+有些危险,因为object虽然不能更改其中的值,不过却可以删除或增加~这就跟原意不符~
+我想问的是,STL里的container难道没有办法当成static const data member┅┅
+或者有其它的方式可以设定其中的值           
+
+侯捷回覆：
+我不敢说我完全懂了您的意思。我把您的问题依我的了解归纳如下：
+Q1：您希望在某个 class 内产生一个 static const data member，
+    并令它是个 STL container.
+Q2：退而求其次，您希望在某个 class 内产生一个 static data member，
+    令它是个 STL container，并令其 key/value 都是 const。
+    
+A1：以下我写了一个测试程式，分别测试 class 内的 usual member, const member, 
+static member, static const member。每个 member 都是 map<string, enumType>
+我想似乎没有办法解决 Q1 的问题。
+
+#include <map>
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <utility>
+using namespace std;
+
+enum month {Jan=1, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec };
+
+void printElem(const pair<string, month>& elem)
+{  cout << '[' << elem.first << ',' << elem.second << ']'; }
+
+class myClass {
+public:
+
+  myClass(const map<string, month>& m) 
+    : _map(m),_mapc(m) { 
+     _maps = m;       // (2)
+     //! _mapc = m;   // (3)
+     //! _mapsc = m;  // (5)
+  }
+  
+  void opTest() {
+    _map.insert(make_pair(string("Apr"),Apr));
+    _maps.insert(make_pair(string("Apr"),Apr));
+    //! _mapc.insert(make_pair(string("Apr"),Apr));  // cb5[w],vc6[x],g29[x]
+    //! _mapsc.insert(make_pair(string("Apr"),Apr)); // cb5[w],vc6[x],g29[x]
+  }
+
+  void display() {
+    cout << "_map: ";
+    for_each(_map.begin(), _map.end(), printElem);
+    cout << endl << "_maps: ";
+    for_each(_maps.begin(), _maps.end(), printElem);     
+    cout << endl << "_mapc: ";
+    for_each(_mapc.begin(), _mapc.end(), printElem);    
+    cout << endl << "_mapsc: ";
+    for_each(_mapsc.begin(), _mapsc.end(), printElem);
+  }
+	
+private:
+  // static const int _i = 9999;  // vc6[x],cb5[o]. 整数型别，可在 class body 内直接设初值
+  map<string, month> _map;
+  static map<string, month> _maps;
+     // _maps 不可出现於 member initialization list，因为它是 static member。
+     // 它的初始化动作在 class body 之外完成，如式(1)。
+     // 也可以在 ctor function body 内被 assigned，如式(2)。
+  const map<string, month> _mapc; 
+     // 如果 _mapc 不出现於 member initialization list 也可以，那麽将无任何元素。
+     //   奇怪，不是说 const value 一定要给初值吗？
+     // 不能在 ctor 中被 assigned，如式(3)，因为 const data 只能 initialized, 不能 assigned
+  static const map<string,month> _mapsc;
+     // _mapsc 不可出现於 member initialization list，因为它是 static member。
+     // 它的初始化动作在 class body 之外完成，如式(4)。但该处似乎无法给初值
+     // 不可在 ctor 中被 assigned，如式(5)，因为 const data 只能 initialized。 
+     // 结论：STL container as a static const data member 无法获得初值。
+};
+
+map<string, month> myClass::_maps;         // (1) 这里有没有机会给初值？
+const map<string, month> myClass::_mapsc;  // (4) 这里有没有机会给初值？
+
+int main()
+{
+  map<string, month> tempMap;
+  tempMap.insert(make_pair(string("Jan"),Jan));
+  tempMap.insert(make_pair(string("Feb"),Feb));
+  tempMap.insert(make_pair(string("Mar"),Mar));
+ 	
+  myClass my(tempMap);
+  my.display(); 
+  my.opTest();
+  my.display();
+  
+  map<const string, const month> tempMapcc;  // vc6[x],cb5[o],g29[o]
+  tempMapcc.insert(make_pair(string("Sep"),Sep));
+  tempMapcc.insert(make_pair(string("Nov"),Nov));
+  tempMapcc.insert(make_pair(string("Dec"),Dec));
+  for_each(tempMapcc.begin(), tempMapcc.end(), printElem);
+}
+
+A2：令「map 的 key/value 都是 const」这应该是没问题的（见 main() 最下）。
+    虽然 VC6 有问题，但我只打算讨论 Standard C++。 
+
+感谢：Panda Lin 
+日期：2003/02/20
+
+
+■讨论
+读者来函：
+我十分困扰的一个问题是，不知道如何使用 C++ 的 wchar_t 和 wstring，尤其不会用 locale。
+我用的是VC++ 6.0，关于多字节字符和宽字符的帮助很少。C++着作中对此问题也很少涉及，
+或者没有恰当例子，不容易看懂。
+下面是我写的一个小程序，只能显示前面七个单字节字符，无法显示後面四个宽字符：
+
+// cb5[o] vc6[o] g295[x]
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+    wstring s=L"Windows操作系统";  
+    int n=s.length();   //  n==11
+    for(int i=0; i<n; i++)
+        cout << s[i] << "  ";  
+          // 87  105  110  100  111  119  115  25805  20316  31995  32113 
+    wcout << endl;  
+}
+
+侯捷回覆：待我研究研究 :)
+感谢：chenxiaohe2
+日期：2003/02/20
+■p93,L-12,小标（笔误）
+原文：以 advanced() 为例
+修改：以 advance() 为例
+感谢：jjhou
+日期：2003/05/06
+■pII,L-11;pIV,L-2（孟岩引介文，繁简内码转换）
+原文：着作   
+修改：着作 （注：不是想着、活着的「着」）
+侯捷注：繁体的「着」字，从BIG5 内码自动转为 GB 内码时会被转为意义不同的字。
+        大陆读者看到这里，可能会摸不清头脑，因为我敲不出我想要敲的字 :(
+感谢：zming
+日期：2003/07/09
+
+■pIII,L-4（孟岩引介文，繁简内码转换）
+原文：什ㄠ
+修改：什麽
+侯捷注：繁体的「麽」字，从BIG5 内码无法顺利自动转为正确的 GB 内码，因此常常出错。
+        大陆读者看到这里，可能会摸不清头脑，因为我敲不出我想要敲的字 :(
+感谢：zming
+日期：2003/07/09
+
+■pII,L1（孟岩引介文，笔误）
+原文：迷一般 
+修改：谜一般 
+感谢：zming
+日期：2003/07/09
+
+■pII,L14（孟岩引介文，笔误）
+原文：Libaray
+修改：Library 
+感谢：zming
+日期：2003/07/09
+
+-- the end
